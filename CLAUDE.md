@@ -20,7 +20,9 @@ die in elke map genoemd worden. Alleen wat nergens anders hoort (skills, decktem
 - **Op de live Client Check (Supabase `ubbthfgfxhttxlkyqdlw`) schrijft Claude nooit zelf**: geen `supabase db push`,
   `link` of `config push`. Migraties als idempotent script, lokaal getest; Eghosa draait ze. (afspraak in `revenuelab-portaal`)
 - **Klantmails verstuurt Claude nooit.** Dat doet alleen Romina (in naam van Wannes). Klantcommunicatie = concept in Vandaag.
-- **Strilio-code (`sprout-lead-core-new`) merget alleen Dries.** Bundel Strilio-wijzigingen in zo weinig mogelijk PR's.
+- **Strilio-code (`sprout-lead-core-new`)** volgt de regels van die repo: eigen branch, PR, checks van GitHub Actions, merge naar
+  `main` met het releaseslot uit §1d van `AGENTS.md`. Productiemigraties en deploys alleen na een uitdrukkelijk ja. Bundel wijzigingen
+  in zo weinig mogelijk PR's. (De nachtploeg van Thibo merget nooit zelf, N5.)
 - **Testen:** testklant "Dries Test"; testberichten (sms/WhatsApp) alleen naar het nummer van Thibo uit `night-shift-thibo/CLAUDE.md`, nooit naar echte leads.
 - **Geld en klantafspraken** (budget, prijzen, beloftes) nooit zonder akkoord; budgetregels staan in `night-shift-thibo/regels/budgetten.md`.
 - **Signaleren, voorstellen, goedkeuren, uitvoeren** blijven gescheiden. Elke wijziging naar buiten krijgt een logregel.
