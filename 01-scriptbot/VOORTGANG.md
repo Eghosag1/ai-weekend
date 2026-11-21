@@ -3,11 +3,36 @@
 Bijwerken na elke sessie (datum, wat gedaan, wat open, beslissingen). Nieuwste bovenaan.
 
 ## Status
-Fase 1 tot 4 gebouwd en lokaal getest. Portaal: commits `d102582` + `a633dcf` op main (migratie 20261121200000, nog NIET live in
-Client Check). Bot: video-agent commit `9825f037`. Wacht op: Eghosa zet de migratie live (live-script), daarna de eerste
-echte klant met de opname van de onboardingcall.
+Nieuw ontwerp gebouwd en lokaal getest: **scripts per klant** (geen Opstart meer). Portaal: commit `74b0f8d` op main
+(migratie 20261121200000 herschreven, nog NIET live in Client Check). Bot: creatieve-motor (video-agent) commit `4e10e755`.
+Wacht op: Eghosa zet de migratie live, daarna de app; dan de eerste echte klant met de opname van de onboardingcall.
+
+Live zetten (Eghosa, in deze volgorde):
+1. In `revenuelab-portaal`: `/usr/bin/python3 scripts/migratie_live.py 20261121200000` maakt `live/20261121200000_live.sql`
+   en `_terug.sql` (lokaal proefgedraaid: live → terug → live, daarna 88 tests groen).
+2. `scripts/clientcheck.sh sql live/20261121200000_live.sql` (één transactie; stopt zelf als Client Check niet op
+   20261120120000 staat). Terug: `_terug.sql`.
+3. De Edge Function `portaal-bot` opnieuw deployen (nieuwe acties klantfeiten, klantfeiten_voorstellen, transcripties,
+   scriptronde, scripts_opleveren).
+4. De app: `scripts/clientcheck.sh app`.
+5. Op de laptop met de werker: `git pull` in creatieve-motor (de werker kent dan taaksoort `scripts`).
 
 ## Logboek
+- 2026-11-21 (sessie 6): ander ontwerp op vraag van Eghosa ("niet in een campagne bij de andere uitingen, wel in dezelfde
+  tool, en nieuwe scripts kunnen laten genereren"). Gebouwd:
+  - Portaal: klantpagina met tabs Campagnes · Scripts · Klantfeiten; scriptrondes per klant (kick-off, promotie,
+    invalshoek, meer hooks, anders; 1-6 scripts, 1-3 hooks); aanvragen via *Nieuwe opdracht → Scripts* (alleen team);
+    rondepagina met rechtstreeks aanpassen (nieuwe versie `handmatig`), feedback naar de bot, nakijken door iedereen
+    (het portaal bewaart wie), klantakkoord per ronde (standaard bij kick-off en promotie, kick-off altijd), koppelen per
+    script aan campagnes, *Naar productie* (koppelt automatisch); blok Scripts op een advertentiecampagne; "Scripts om
+    na te kijken" op Wacht op jou. Opstart-code weg.
+  - Bot: `tools/scripts.py` per ronde (`scripts/ronde-N/`), werker met taaksoort `scripts` (licht, zonder FilmCraft).
+  - Onafhankelijke nakijkronde: 3 belangrijke fouten (feit veranderd werd gewist door een nieuwe versie; de bot kon een
+    handmatige aanpassing overschrijven of een goedgekeurde ronde wijzigen; dubbele oplevering), 6 kleinere (versie van
+    de bot meteen bij de klant, twee keer naar productie, duizendtalpunt in de bedragcontrole, twee taken tegelijk,
+    vraag van de bot telde niet als open, vrij format en datumveld). Alle opgelost en getest.
+  - Getest: 88 databasetests, 60 app-tests, 79 bottests (scripts + werker), de hele lus in de browser (aanvragen →
+    bot → feedback → aanpassen → feiten → nakijken → klant → akkoord → productie → koppelen) op 1440 en 390 px.
 - 2026-11-21 (sessie 5): fase 2 tot 4 gebouwd. Keuzes van Eghosa: Opstart bouw ik als basis (ook voor de posts van de
   branding agent), bevestigen van klantfeiten in het portaal.
   - Portaal (revenuelab-portaal `d102582`): campagnetype `opstart` (één per klant, type ligt vast, geen opdrachten);
@@ -54,6 +79,9 @@ echte klant met de opname van de onboardingcall.
 - 2026-11-21: map aangemaakt.
 
 ## Beslissingen
+- 2026-11-21 avond: scripts niet in een campagne maar per klant op een eigen tab, in rondes; aanvragen alleen door het
+  team; de werker schrijft ze automatisch; iedereen van het team kijkt na; het team past rechtstreeks aan in het portaal;
+  klantakkoord per ronde; koppeling per script aan een of meer campagnes (Eghosa: "ja goed").
 - 2026-11-21: scripts in het portaal (feedback daar), geen Google Docs (Eghosa).
 - 2026-11-21: de commerciële klantfeiten in Client Check (Eghosa).
 - 2026-11-21: 3 scripts × 2 hooks (Eghosa).
@@ -66,7 +94,7 @@ echte klant met de opname van de onboardingcall.
 - 2026-11-21: na goedkeuring een video-ad-opdracht die wacht op footage; clips kies je met de hand als de kaart in de pc zit.
 
 ## Open vragen
-- Live zetten van migratie 20261121200000 (Eghosa draait het live-script) en daarna de app (Netlify).
+- Live zetten van migratie 20261121200000 en de app (stappen onder Status).
 - Slack-melding bij nieuwe scripts of feedback; Wrike-taken (Thibo nakijken, shoot Hermann) via de Vault.
 - Klantfeiten ook leesbaar in de MCP van Client Check (nu via portaal-bot).
 - Voorbeelden: welke opgeleverde scripts zijn de lat, en welke werden afgekeurd en waarom? (Eghosa)

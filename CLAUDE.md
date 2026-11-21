@@ -43,7 +43,7 @@ Alle repo's staan op GitHub en op deze laptop in `~/Developer/`, behalve video-a
 | Repo | Rol in de branding agent |
 | --- | --- |
 | `Red-Pepper-Antwerp/ClientsCheck` | Klantbrein: de definitief goedgekeurde huisstijl; MCP-server waar andere agents lezen |
-| `Red-Pepper-Antwerp/revenuelab-portaal` | Campagne "Opstart": concepten, versies, opmerkingen, goedkeuring, presentatie |
+| `Red-Pepper-Antwerp/revenuelab-portaal` | Klantpagina (tabs Campagnes · Scripts · Klantfeiten): scriptrondes, versies, opmerkingen, goedkeuring; de posts van de branding agent komen in een campagne |
 | `Eghosag1/creatieve-motor` (vroeger video-agent; lokale map blijft `~/Desktop/video-agent`) | Productie: merkanalyse, posts/statics, videostijl en testclips, (straks ook) mails |
 | `Eghosag1/mail-bot` | Nieuwsbrief: stijlronde en bouwdoos (wordt samengevoegd in video-agent, zie VOORTGANG) |
 | `Red-Pepper-Antwerp/night-shift-thibo` | Calculatorsjabloon (`dag/2026-11-19/perf-calculator/`) en calculatorregels |
