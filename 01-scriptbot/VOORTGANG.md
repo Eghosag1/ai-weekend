@@ -3,10 +3,31 @@
 Bijwerken na elke sessie (datum, wat gedaan, wat open, beslissingen). Nieuwste bovenaan.
 
 ## Status
-Fase 1 gebouwd in video-agent (commit `78ea3340` op main, repo nu `Eghosag1/creatieve-motor`). Volgende: test op een
-echte nieuwe klant (met een Fireflies-transcriptie), daarna fase 2 (tabel klantfeiten in Client Check).
+Fase 1 tot 4 gebouwd en lokaal getest. Portaal: commit `d102582` op main (migratie 20261121200000, nog NIET live in
+Client Check). Bot: video-agent commit `9825f037`. Wacht op: Eghosa zet de migratie live (live-script), daarna de eerste
+echte klant met de opname van de onboardingcall.
 
 ## Logboek
+- 2026-11-21 (sessie 5): fase 2 tot 4 gebouwd. Keuzes van Eghosa: Opstart bouw ik als basis (ook voor de posts van de
+  branding agent), bevestigen van klantfeiten in het portaal.
+  - Portaal (revenuelab-portaal `d102582`): campagnetype `opstart` (één per klant, type ligt vast, geen opdrachten);
+    `portaal.klantfeiten` + historiek (bot stelt voor, bevestigd blijft, schatting alleen voor prijs); `scriptsets`,
+    `scripts` (inhoud ligt vast), `scriptfeedback`; statussen concept → nagekeken → klaar_voor_kickoff (alle feiten in
+    de scripts bevestigd) → goedgekeurd (3× akkoord in de kick-off; aanpassen = feedback, bot levert na de kick-off,
+    ongewijzigde scripts houden hun akkoord); `scripts_naar_opdracht` maakt een video-ad-opdracht via
+    `opdracht_starten` (SD-kaart, wacht op footage). Bot-acties: opstart, klantfeiten, klantfeiten_voorstellen,
+    transcripties (Fireflies uit Client Check, alleen lezen), scripts_opleveren, scripts. Scherm Opstart op de
+    campagnepagina (scripts, feedback, klantfeiten bevestigen/aanpassen, kick-off, shootlijst, naar productie).
+    57 databasetests, build en apptests groen; schermcontrole met Chrome (1440 en 390 px) zonder fouten.
+  - Live-script gemaakt met `scripts/migratie_live.py` en proefgedraaid: live → terug → opnieuw live, en een tweede
+    keer live weigert. Live staat op Postgres 15.8 en op t/m 20261120120000 (precies wat het script verwacht); lokaal
+    getest op Postgres 17 (de config van de repo), niet op 15.
+  - Bot (video-agent `9825f037`): `tools/scripts.py` opstart, transcripties, feiten-voorstellen, feiten-ophalen,
+    opleveren, ophalen; 16_SCRIPTS.md en skill bijgewerkt; 32 tests. Volledige lus getest tegen de lokale database.
+  - Niet getest: de Edge Function `portaal-bot` zelf (de lokale runtime krijgt hier geen geheim en geen npm via de
+    proxy); de wijziging is alleen de lijst toegelaten acties.
+  - Gevonden, niet van mij: `supabase/tests/feedback_bron.test.sql` en `feedback_doorsturen.test.sql` falen al op main
+    (ook zonder deze migratie).
 - 2026-11-21 (sessie 4, vervolg): fase 1 gebouwd in video-agent: `VIDEO AGENT/16_SCRIPTS.md`, `tools/scripts.py`
   (start, nieuw, controle, md, video, lijst), `config/scripts.json`, `templates/klant/scriptbriefing.json`, skill
   `scriptbot` (+ link in `.claude/skills/`), regel 14 in `AGENTS.md`. Controle weigert: getal of bedrag zonder bron,
@@ -39,6 +60,9 @@ echte nieuwe klant (met een Fireflies-transcriptie), daarna fase 2 (tabel klantf
 - 2026-11-21: na goedkeuring een video-ad-opdracht die wacht op footage; clips kies je met de hand als de kaart in de pc zit.
 
 ## Open vragen
+- Live zetten van migratie 20261121200000 (Eghosa draait het live-script) en daarna de app (Netlify).
+- Slack-melding bij nieuwe scripts of feedback; Wrike-taken (Thibo nakijken, shoot Hermann) via de Vault.
+- Klantfeiten ook leesbaar in de MCP van Client Check (nu via portaal-bot).
 - Voorbeelden: welke opgeleverde scripts zijn de lat, en welke werden afgekeurd en waarom? (Eghosa)
 - Afstemmen met Thibo: taak 14 "Nieuwe klant in één opdracht" vraagt ook de scriptbriefing.
 - Leest `get_conversation` (MCP Client Check) de volledige transcriptie? Nog niet getest.
