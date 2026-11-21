@@ -8,6 +8,9 @@ Stap 1 tot 4 gebouwd voor Loni Bouw: analyse, richtingen A/B/C met stijlkaart, 3
 Volgende: posts in het portaal (campagne "Opstart"), dan stap 6 (nieuwsbrief).
 
 ## Logboek
+- 2026-11-21 (sessie 4, vervolg): Eghosa vond de posts "wat simpel". Templates v2 volgens de 16 feedbackrondes op Floors & More
+  (klantbrein §2): overlappende vlakken, detailfoto over de hoofdfoto, titel licht/zwaar, lijnkader achter de foto, genummerde
+  punten. Review zonder kicker (aanhalingsteken als teken). Alle 9 posts IN ORDE (`<richting>/posts_v<N>_t2/`).
 - 2026-11-21 (sessie 4, vervolg): stap 4 in video-agent (commit `e9b6b729`): `tools/brandingposts.py`: realisatie, review,
   expertvraag (feed 4:5) op de bouwstenen en controle van `statics.py`, met een vertaler huisstijl → statics-stijl. Inhoud
   Loni Bouw in `huisstijl/posts_inhoud.json`, alleen echte bronnen: foto's van de site, getuigenis van de site ("Fijn overleg
