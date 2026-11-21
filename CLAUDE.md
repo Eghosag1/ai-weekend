@@ -2,8 +2,9 @@
 
 Deze repo is de werkmap van Eghosa voor de **Branding Agent** (Revenue Lab / Red Pepper, briefing 21 november 2026).
 Het is een cockpit, geen codeproject: hier staan de context, het plan en de voortgang. De code komt in de bestaande repo's.
-Sinds 21/11 is de branding agent het enige onderdeel; de andere onderdelen zijn uit deze werkmap gehaald (terug te vinden in
-de git-geschiedenis, laatste stand met alles: commit `f482e06`).
+Sinds 21/11 zijn de branding agent (`04-branding-agent/`) en de scriptbot (`01-scriptbot/`, terug sinds 21/11 avond) de
+onderdelen; de andere zijn uit deze werkmap gehaald (terug te vinden in de git-geschiedenis, laatste stand met alles: commit
+`f482e06`). Werk je aan de scriptbot: lees `01-scriptbot/CLAUDE.md` en `01-scriptbot/VOORTGANG.md` in plaats van die van 04.
 
 ## Werkafspraken
 
