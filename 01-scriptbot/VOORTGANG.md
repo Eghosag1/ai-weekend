@@ -3,7 +3,7 @@
 Bijwerken na elke sessie (datum, wat gedaan, wat open, beslissingen). Nieuwste bovenaan.
 
 ## Status
-Fase 1 tot 4 gebouwd en lokaal getest. Portaal: commit `d102582` op main (migratie 20261121200000, nog NIET live in
+Fase 1 tot 4 gebouwd en lokaal getest. Portaal: commits `d102582` + `a633dcf` op main (migratie 20261121200000, nog NIET live in
 Client Check). Bot: video-agent commit `9825f037`. Wacht op: Eghosa zet de migratie live (live-script), daarna de eerste
 echte klant met de opname van de onboardingcall.
 
@@ -26,6 +26,12 @@ echte klant met de opname van de onboardingcall.
     opleveren, ophalen; 16_SCRIPTS.md en skill bijgewerkt; 32 tests. Volledige lus getest tegen de lokale database.
   - Niet getest: de Edge Function `portaal-bot` zelf (de lokale runtime krijgt hier geen geheim en geen npm via de
     proxy); de wijziging is alleen de lijst toegelaten acties.
+  - Onafhankelijke nakijkronde (verse agent): niets blokkerend, 3 belangrijke logicafouten (een aangepast feit liet een
+    script met de oude prijs door; open feedback hield de kick-off niet tegen; bevestigen bevestigde wat er intussen
+    stond) en enkele kleine; alle opgelost in `a633dcf` met tests (62), schermcontrole en live-proef opnieuw groen.
+  - Live zetten (Eghosa, op de laptop met het portaal): `git pull`; `supabase start`; `supabase db reset`;
+    `/usr/bin/python3 scripts/migratie_live.py 20261121200000`; `scripts/clientcheck.sh sql live/20261121200000_live.sql`;
+    `scripts/clientcheck.sh functies`; `scripts/clientcheck.sh app`. Terug: `live/20261121200000_terug.sql`.
   - Gevonden, niet van mij: `supabase/tests/feedback_bron.test.sql` en `feedback_doorsturen.test.sql` falen al op main
     (ook zonder deze migratie).
 - 2026-11-21 (sessie 4, vervolg): fase 1 gebouwd in video-agent: `VIDEO AGENT/16_SCRIPTS.md`, `tools/scripts.py`
