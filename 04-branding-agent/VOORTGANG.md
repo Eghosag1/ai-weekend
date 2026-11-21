@@ -8,6 +8,9 @@ Stap 1 tot 4 gebouwd voor Loni Bouw: analyse, richtingen A/B/C met stijlkaart, 3
 Volgende: posts in het portaal (campagne "Opstart"), dan stap 6 (nieuwsbrief).
 
 ## Logboek
+- 2026-11-21 (sessie 4, vervolg): proef v2 afgekeurd ("shit"). Correcties van Eghosa: niet "ingetogen" (proef v3 van de
+  realisatie was goed), en geen vaste templates: per klant eigen posts vanuit hun huisstijl, fantaseren mag. Regels en
+  geheugen bijgewerkt. Proef v3 Loni Bouw met de dakvorm uit het logo als beeldidee (`B/proef/v3/`: post, review, carrousel).
 - 2026-11-21 (sessie 4, vervolg): algemene feedback op de posts (geen logo behalve eindslide, niet altijd titel + zin, geen
   AI-slop, geen voetregel, variatie in layout en kleur) vastgelegd in `15_BRANDING.md` en `13_SOCIALPOSTS.md`, met de
   interpretatie van zijn visuele keuzes; ook in het geheugen van Claude. Proef v2: post (donker), review (wit), carrousel
@@ -48,6 +51,7 @@ Volgende: posts in het portaal (campagne "Opstart"), dan stap 6 (nieuwsbrief).
 - 2026-11-21: map aangemaakt met context uit het bouwplan.
 
 ## Beslissingen
+- 2026-11-21: geen vaste posttemplates voor alle klanten; per klant eigen ontwerp vanuit de huisstijl (Eghosa). `tools/brandingposts.py` vervalt als aanpak.
 - 2026-11-21: de vaste uitingen per stijl in de brandingpresentatie: post (realisatie), review en carrousel (expertvraag) (Eghosa).
 - 2026-11-21: postsstijl = redactioneel zoals de proef realisatie_proef_v3 (Eghosa: "eigenlijk niet slecht"); de templates v1/v2 vervallen.
 - 2026-11-21: Loni Bouw: stijl B is de favoriet van Eghosa; posts eerst in B (de klant kiest in de meeting).
