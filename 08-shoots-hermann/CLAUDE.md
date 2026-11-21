@@ -12,9 +12,15 @@ Sectie "17 · Hermann's shoots": funnelvideo's per klant (Renov is een voorbeeld
 De oude Wrike-taak "15 | Shoot-planning agent" valt hierin.
 
 ## Wat al bestaat
-- `video-agent/VIDEO AGENT/Video Projecten/<klant>/`: per klant de video's, scripts, status en beeldbank (25 klanten).
+- `video-agent/VIDEO AGENT/Video Projecten/<klant>/`: per klant de video's, scripts, status en beeldbank (21 echte klantmappen,
+  plus Revenue Lab en testmappen). Per video `03_STATUS.md` met GOEDGEKEURD / KLANT AKKOORD: een inventaris van wat de bot sinds
+  oktober maakte. Oudere, met de hand gemonteerde video's en de losse shootmappen in Drive staan er niet in.
 - Client Check: campagnes en ads per klant; adressen deels in Client Check en Strilio.
-- Geen contentmap, geen routeplanner.
+- Vault `google-run`: agenda lezen (`calendars`, `events`) voor gekoppelde Google-accounts.
+- Ontwerp en rapport fase 1 van de nachtploeg (21/11): `night-shift-thibo/dag/2026-11-21/ontwerp-shootplanning-agent.md` en
+  `shootplanning.md` (zwakke klanten met voorrang: Roozenburg, Batisol, Renobest badkamer, Immo Beguin, Dryguard, Nrgea).
+- Geen code voor contentmap of routeplanner. Taak 17 is volledig van Eghosa (afspraak met Thibo, 21/11).
+- Brand package per klant staat in geen enkele bron (gezocht in alle repo's; de nachtploeg vond ook niets in Client Check en Drive).
 
 ## Wat je bouwt
 - [ ] Contentmap per klant uit de videobotmappen + lopende ads: per funnelstap en kanaal wat er is en wat ontbreekt.
@@ -32,5 +38,6 @@ de klant met pakket staat erin.
 
 ## Open vragen
 - Welke route- of afstandsdienst? Adressen van de werven: waar staan die betrouwbaar?
-- Agendatoegang voor Hermann.
+- Agendatoegang voor Hermann (koppelen via de Vault `google-oauth` of agenda delen met een gekoppeld account).
+- Lijst van klanten met brand package (vaste social-shoots): van Wannes of Eghosa, daarna in Client Check.
 - Signaal van taak 12 (zie `../_thibo/AFSPRAKEN.md`).

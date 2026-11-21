@@ -12,7 +12,9 @@ een eerdere klant; one-pager voor elke meeting (maandelijks de eerste 120 dagen,
 
 ## Wat al bestaat
 - Klantcontext, gesprekken en meetingdata in Client Check.
-- Het playbook zelf staat in geen enkele repo (gezocht op "Extra's voor klanten"); vermoedelijk in Drive of Notion.
+- Het playbook "Extra's voor klanten" is een Drive-doc (15 B2B- en 15 B2C-punten). De nachtploeg zette het op 21/11 om in een
+  platte lijst van ongeveer 29 ideeën: `night-shift-thibo/dag/2026-11-21/consulting-agent/ideeen.md` + `.json`, met `eenpager-agent.md`
+  (verslag: `dag/2026-11-21/taak-4611023304.md`). Wie taak 16 verder bouwt, is nog af te spreken met Thibo.
 
 ## Wat je bouwt
 - [ ] Ideeenlijst als tabel: idee, niche, fase/trigger, eerder resultaat (klant + cijfer), bron.
@@ -28,4 +30,4 @@ Voor elke geplande meeting van een testklant staat een one-pager klaar; geen alg
 Lijst eerst in deze map; daarna als tabel in `ClientsCheck` zodat de agent ze kan lezen.
 
 ## Open vragen
-- Waar staat het playbook "Extra's voor klanten"?
+- Bouwt Eghosa verder op de lijst van de nachtploeg, of Thibo? (afspreken)

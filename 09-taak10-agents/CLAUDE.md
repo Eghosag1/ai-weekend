@@ -21,7 +21,8 @@ Campaign health, Relationship en de triggers), "24-hour rule", "Ongoing retentio
 - `_shared/copilot-signals.ts`: dagelijkse signalen (o.a. opvolging trager dan 48 u, leads +50%, CPA -30%).
 - `copilot-escalations`: pushmelding bij boze klant, stilgevallen ads.
 - `src/lib/clientHealthOverview.ts`: klantstatus per week (goed, aandacht, risico, geen contact), nu handmatig.
-- Strilio `agency-alert-runtime`: interne dagmail bij leads die 72 werkuren niet opgevolgd zijn.
+- Strilio `agency-alert-runtime`: interne dagmail bij leads die niet opgevolgd zijn (`stale_after_hours`, standaard 72, per instelling aanpasbaar; of het werkuren zijn, is niet bevestigd).
+- De nachtploeg pikte taak 10 op 21/11 op (verslag `night-shift-thibo/dag/2026-11-21/taak-4607254266.md`, alleen ontwerp); Thibo haalt zich eraf, Eghosa bouwt.
 - Strilio workflowmotor (`src/services/workflows/`), trigger `opportunity_inactive_days`, mailvoorkeuren/afmelden, AI-opvolgbot, bulkimport, reviewverzoeken (`src/services/reputation`).
 - Geen sitrep, geen reactivatieflow, geen 24-uursmail naar de klant.
 

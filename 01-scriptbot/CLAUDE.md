@@ -15,14 +15,17 @@ met per script de vlag "klant acteert zelf" of "acteur nodig". De scripts worden
 ## Wat al bestaat
 - `video-agent/VIDEO AGENT/templates/video_project/01_SCRIPT.md`: sjabloon per video.
 - `video-agent/BRIEFING.md`: voorbeeldscripts (ABBI, Floors & More) zoals ze nu met de hand geschreven worden. Dat is de lat.
-- `video-agent/VIDEO AGENT/10_ADVERTENTIETEKSTEN.md` + `tools/teksten.py`: regels voor teksten (lengtes, verboden woorden).
+- `video-agent/VIDEO AGENT/10_ADVERTENTIETEKSTEN.md` + `VIDEO AGENT/tools/teksten.py`: regels voor teksten (lengtes, verboden woorden, prijzen als "vanaf").
 - Klantbrein per klant: `video-agent/VIDEO AGENT/Video Projecten/<klant>/00_KLANTBREIN.md`.
-- Een scriptbot bestaat nog niet.
+- `video-agent/VIDEO AGENT/templates/briefing.md`: briefingsjabloon voor opdrachten "Vrij" (geen scriptbriefing, wel bruikbare velden).
+- Client Check heeft een oude tabel `strategy_scripts` (hooks, video_script, on_screen_text); het portaal besliste op 2026-11-02
+  die niet te gebruiken (`VIDEO AGENT/09_OPDRACHTEN.md` §9).
+- Een scriptbot bestaat nog niet. EGS Projects heeft een Strilio-tenant (17/11), maar geen klantmap in de videobot.
 
 ## Wat je bouwt
 - [ ] Invoer: de "scriptbriefing" (komt uit 02-kickoff-agent). Tot die bestaat: met de hand een briefing in hetzelfde formaat.
 - [ ] Vast formaat van de scriptbriefing: aanbod en focus, prijsvork, lopende promotie + einddatum, USP's, bezwaren (vraag 5 en 6), werf/locatie + wat er geplaatst wordt + prijs (vraag 7), wie in beeld (vraag 8), regio.
-- [ ] Scripts in het formaat van `01_SCRIPT.md`, aantal en lengte zoals in `BRIEFING.md` (bv. 12 tot 15 seconden, verticaal).
+- [ ] Scripts in het formaat van `01_SCRIPT.md`: standaard 3 scripts met elk 2 hooks per klant (beslist 21/11), 12 tot 15 seconden verticaal (ongeveer 30 tot 38 gesproken woorden, zoals in `BRIEFING.md`).
 - [ ] Per script: format (persoon in beeld, foto swipe, voice-over), spreektekst, tekst in beeld, vlag klant/acteur.
 - [ ] Hooks uit de echte vragen en bezwaren van hun klanten (deckregel 8: drie hooks uit hun klantvragen).
 - [ ] Controle: geen feiten die niet in de briefing staan; onbekend = vraag, niet verzinnen.
@@ -39,4 +42,4 @@ met per script de vlag "klant acteert zelf" of "acteur nodig". De scripts worden
 02 (levert de scriptbriefing), 03 (scripts op dia's), 04 (zelfde huisstijl), 08 (shootplanning).
 
 ## Open vragen
-- Hoeveel scripts per klant standaard? (BRIEFING.md toont er 3 per klant.)
+Zie `VOORTGANG.md`.

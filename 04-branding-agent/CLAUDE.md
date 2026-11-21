@@ -13,7 +13,8 @@ pakket 500 euro voor 9 posts + nieuwsbrief, normaal ongeveer 2.000), outline bra
 de 3 posttemplates met vaste velden, alternatieven voor post 4 tot 6, gratis nieuwsbrief in maand 2 voor klanten zonder pakket.
 
 ## Wat al bestaat
-- `video-agent`: klantbrein per klant met huisstijl uit de website (`templates/klant/00_KLANTBREIN.md`, `06_MONTAGEPROFIEL.md` §11), socialposts (`13_SOCIALPOSTS.md`, `tools/posts.py`), statics (`07_STATICS.md`, `tools/statics.py`), montage en captions, nieuwsbrieven als soort `mail` (`14_MAILS.md`).
+- `video-agent/VIDEO AGENT/`: klantbrein per klant met huisstijl uit de website (`templates/klant/00_KLANTBREIN.md`, `06_MONTAGEPROFIEL.md` §11), socialposts (`13_SOCIALPOSTS.md`, `tools/posts.py`), statics (`07_STATICS.md`, `tools/statics.py`), montage en captions, nieuwsbrieven als soort `mail` (`14_MAILS.md`, `tools/mails.py`).
+- Taak 11 is volledig van Eghosa (afspraak met Thibo, 21/11); de nachtploeg heeft er niets inhoudelijks voor gebouwd.
 - `mail-bot`: stijlronde met varianten op een keuzepagina, klant kiest, bouwdoos (`templates/STIJL.md`); stijl vastgelegd na klantakkoord.
 - `revenuelab-portaal`: review, klantlink, akkoord.
 - Strilio: nieuwsbrieven versturen met klikmeting en afmelden.

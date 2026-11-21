@@ -48,7 +48,9 @@ Volgorde: 01 en 05 eerst, dan 06, dan 02 samen met 03 en 04, daarna 09, 07, 08, 
 ## Waar de code staat
 
 Alle repo's staan op GitHub. `scripts/repos-klonen.sh` kloont ontbrekende repo's naast deze map (standaard in `~/Developer/`).
-Op de laptop van het weekend staan `video-agent` en `revenuelab-portaal` al onder `~/Revenue Lab/` (`VIDEO-AGENT-overdracht`, `revenuelab-portaal`): kijk daar eerst.
+Op deze laptop (stand 21/11) staan alle repo's in `~/Developer/`; `~/Revenue Lab/` bestaat hier niet. Let op: er staat een tweede
+kloon van video-agent in `~/Desktop/video-agent` met lokale wijzigingen; de mailbot gebruikt die (`mail-bot/tools/mail.sh`). Werk aan
+de videobot alleen in één kloon en spreek af welke. De Vault heeft geen eigen CLAUDE.md of AGENTS.md (alleen `README.md`).
 
 | Repo | Waarvoor |
 | --- | --- |
