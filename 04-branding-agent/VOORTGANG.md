@@ -8,6 +8,8 @@ Stap 1 tot 4 gebouwd voor Loni Bouw: analyse, richtingen A/B/C met stijlkaart, 3
 Volgende: posts in het portaal (campagne "Opstart"), dan stap 6 (nieuwsbrief).
 
 ## Logboek
+- 2026-11-21 (sessie 4, vervolg): v4 "richting goed maar moet beter"; Loni gebruikt geen afgeronde hoeken. Regel 6 in
+  `15_BRANDING.md`: referentie = richting, huisstijl = vorm. Proef v5 (`B/proef/v5/`): rechte hoeken, verloop, mensen uit hun vlak.
 - 2026-11-21 (sessie 4, vervolg): nieuw proces (Eghosa): eerst screenshots van posts die bij de klant passen, daaruit alle
   uitingen. Eén richting per klant (geen A/B/C meer). Pakket: post, review, carrousel, nieuwsbrief, Facebook-banner,
   profielfoto, videostijl (5 clips = 1 video), calculator, brandingpresentatie, huisstijl in Client Check.
