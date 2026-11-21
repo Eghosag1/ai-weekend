@@ -8,6 +8,8 @@ Stap 1 tot 4 gebouwd voor Loni Bouw: analyse, richtingen A/B/C met stijlkaart, 3
 Volgende: posts in het portaal (campagne "Opstart"), dan stap 6 (nieuwsbrief).
 
 ## Logboek
+- 2026-11-21 (sessie 4, vervolg): v5 "goede richting, nog veel lege ruimte". Regel 7: lege ruimte = grotere foto's en/of tekst,
+  nooit opvullen. Proef v6 (`B/proef/v6/`).
 - 2026-11-21 (sessie 4, vervolg): v4 "richting goed maar moet beter"; Loni gebruikt geen afgeronde hoeken. Regel 6 in
   `15_BRANDING.md`: referentie = richting, huisstijl = vorm. Proef v5 (`B/proef/v5/`): rechte hoeken, verloop, mensen uit hun vlak.
 - 2026-11-21 (sessie 4, vervolg): nieuw proces (Eghosa): eerst screenshots van posts die bij de klant passen, daaruit alle
