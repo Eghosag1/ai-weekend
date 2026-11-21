@@ -3,11 +3,20 @@
 Bijwerken na elke sessie (datum, wat gedaan, wat open, beslissingen). Nieuwste bovenaan.
 
 ## Status
-Loni Bouw: merkanalyse en huisstijlbestand klaar; posts in proef (richting uit referentie 01, laatste versie
-`huisstijl/B/proef/v7/`). Ontwerpregels 1-8 in `15_BRANDING.md` van de creatieve motor.
-Volgende: akkoord op de posts, dan Facebook-banner, profielfoto, nieuwsbrief, videostijl, calculator, presentatie.
+Roozenburg: volledig brandingpakket als voorstel in `Video Projecten/Roozenburg/huisstijl/` (creatieve motor):
+huisstijl A v1, posts `proef/v2/`, Facebook-banner + profielfoto `proef/socials_v1/`, nieuwsbrief `nieuwsbrief/v1/`,
+videostijl `videostijl/v1/` (5 clips = 22 s), calculator `calculator/v1/` (demo), presentatie `presentatie/v3/` (12 dia's, PDF).
+Client Check: branch `feat/client-brand-styles` in ClientsCheck (lokaal, niet gepusht). Ontwerpregels 1-9 in `15_BRANDING.md`.
+Skill `branding` beschrijft de hele werkwijze. Volgende: feedback van Eghosa; skill testen op een derde klant.
 
 ## Logboek
+- 2026-11-22 (sessie 4, vervolg): "posts even achterwege, ga verder met de rest". Vier agents parallel: nieuwsbrief
+  (mails.py IN ORDE), videostijl (5 clips uit hun Drive-shoots), calculator (vragen en prijslogica van hun live calculator
+  calculator-roozenburg-contact.netlify.app; 13/13 tests; demo), Client Check (tabel client_brand_styles met versies,
+  functies propose/confirm/activate, MCP-tool get_brand_style, lokaal getest in een wegwerpdatabase; commit `8c476ab` op
+  `feat/client-brand-styles`, niet gepusht). Zelf: huisstijlbestand Roozenburg, Facebook-banner, profielfoto,
+  `tools/brandingpresentatie.py` (HTML -> PDF uit huisstijl + manifest), skill `branding` volledig. Gsm-nummer van Thibo
+  uit de calculatortests gehaald. Open beslissingen Client Check: zie `ClientsCheck/docs/branding/huisstijl-in-client-check.md`.
 - 2026-11-21 (sessie 4, vervolg): Roozenburg v1 "mag allemaal wat simplistischer; niet altijd informatief, anders ben je
   er na 20 posts door". Regel 9 in `15_BRANDING.md`. Proef v2 (`Roozenburg/huisstijl/proef/v2/`, commit `b98b5f99`): payoff
   op foto, alleen het citaat, werkwijze in beelden met één zin per slide.
