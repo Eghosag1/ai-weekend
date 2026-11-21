@@ -3,11 +3,13 @@
 Bijwerken na elke sessie (datum, wat gedaan, wat open, beslissingen). Nieuwste bovenaan.
 
 ## Status
-Analyse klaar (`ANALYSE.md`), architectuur en bouwvolgorde in `CLAUDE.md`. Nog niets gebouwd.
-Stap 1 tot 4 gebouwd voor Loni Bouw: analyse, richtingen A/B/C met stijlkaart, 3 posts per richting (B = favoriet van Eghosa).
-Volgende: posts in het portaal (campagne "Opstart"), dan stap 6 (nieuwsbrief).
+Loni Bouw: merkanalyse en huisstijlbestand klaar; posts in proef (richting uit referentie 01, laatste versie
+`huisstijl/B/proef/v7/`). Ontwerpregels 1-8 in `15_BRANDING.md` van de creatieve motor.
+Volgende: akkoord op de posts, dan Facebook-banner, profielfoto, nieuwsbrief, videostijl, calculator, presentatie.
 
 ## Logboek
+- 2026-11-21 (sessie 4, vervolg): v6 "al beter", maar titels te veel regelafstand en elementen te krap. Regel 8 (titels
+  ±0,9, ≥ ±60 px lucht tussen elementen, ±70 px tot de rand). Proef v7 (`B/proef/v7/`, commit `6b95fd63`).
 - 2026-11-21 (sessie 4, vervolg): v5 "goede richting, nog veel lege ruimte". Regel 7: lege ruimte = grotere foto's en/of tekst,
   nooit opvullen. Proef v6 (`B/proef/v6/`).
 - 2026-11-21 (sessie 4, vervolg): v4 "richting goed maar moet beter"; Loni gebruikt geen afgeronde hoeken. Regel 6 in
