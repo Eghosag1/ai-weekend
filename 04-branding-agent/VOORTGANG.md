@@ -4,9 +4,12 @@ Bijwerken na elke sessie (datum, wat gedaan, wat open, beslissingen). Nieuwste b
 
 ## Status
 Analyse klaar (`ANALYSE.md`), architectuur en bouwvolgorde in `CLAUDE.md`. Nog niets gebouwd.
-Volgende stap: fase 1 (formaat huisstijlbestand + merkanalyse), testklant Loni Bouw.
+Stap 1: voorstel huisstijlbestand in `ontwerp/01-huisstijlbestand.md`, wacht op akkoord. Testklant Loni Bouw.
 
 ## Logboek
+- 2026-11-21 (sessie 4): stap 1 gestart. Stijlbestanden gelezen (`stijl.json`, `tekststijlen.json`, `config/motion.json`,
+  `_social/abbi_stijl.py`, klantbrein Loni Bouw §2-3, mail-bot `KLANTBREIN.md`/`STIJL.md`, calculator `perf-calculator`).
+  Voorstel: één `huisstijl.json` per klant en richting, met vertalers naar de bestaande bestanden.
 - 2026-11-21 (sessie 3): nieuwe briefing van Eghosa (`00-bronnen/briefing-branding-2026-11-21.md`). Werkmap opgeruimd: alleen
   de branding agent blijft (andere mappen, `_thibo`, `scripts`, bouwspecificatie en bouwplan verwijderd; laatste stand met alles:
   `f482e06`). Vier onderzoeksagents (alleen lezen) op portaal, Client Check, video-agent + mail-bot, Strilio + Vault + nachtploeg.
@@ -17,6 +20,7 @@ Volgende stap: fase 1 (formaat huisstijlbestand + merkanalyse), testklant Loni B
 - 2026-11-21: map aangemaakt met context uit het bouwplan.
 
 ## Beslissingen
+- 2026-11-21: videostijl = 5 testclips die samen 1 video vormen (Eghosa).
 - 2026-11-21: alleen de branding agent; de rest uit de werkmap (Eghosa).
 - 2026-11-21: architectuur zoals in `CLAUDE.md`: Client Check = goedgekeurde huisstijl, portaal "Opstart" = werkplaats,
   video-agent = productie, één huisstijlbestand per klant en stijlrichting (Eghosa: "klinkt goed").
