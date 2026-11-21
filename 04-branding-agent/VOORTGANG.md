@@ -8,6 +8,11 @@ Stap 1 tot 4 gebouwd voor Loni Bouw: analyse, richtingen A/B/C met stijlkaart, 3
 Volgende: posts in het portaal (campagne "Opstart"), dan stap 6 (nieuwsbrief).
 
 ## Logboek
+- 2026-11-21 (sessie 4, vervolg): posts v2 "zien er echt niet goed uit" (Eghosa). Oorzaak: advertentiemotor (knop, kicker,
+  feiten, vakken) en geen idee per post. Referentie: socialstatics FM/ABBI van 18/11 (sessiemap; de echte posts staan op de
+  andere laptop, Eghosa zoekt ze). Nieuwe redactionele stijl als proef in `Loni Bouw/huisstijl/B/proef/` (commit `6142baaa`):
+  idee + titel zwaar/licht, haarlijn-kicker, grote foto met detailcirkel, signatuur logo + voetregel, geen knop.
+  Realisatie "Plat dak. Vol licht." goed bevonden als richting; daarna review en carrousel (5 slides) in dezelfde stijl.
 - 2026-11-21 (sessie 4, vervolg): Eghosa vond de posts "wat simpel". Templates v2 volgens de 16 feedbackrondes op Floors & More
   (klantbrein §2): overlappende vlakken, detailfoto over de hoofdfoto, titel licht/zwaar, lijnkader achter de foto, genummerde
   punten. Review zonder kicker (aanhalingsteken als teken). Alle 9 posts IN ORDE (`<richting>/posts_v<N>_t2/`).
@@ -39,6 +44,8 @@ Volgende: posts in het portaal (campagne "Opstart"), dan stap 6 (nieuwsbrief).
 - 2026-11-21: map aangemaakt met context uit het bouwplan.
 
 ## Beslissingen
+- 2026-11-21: de vaste uitingen per stijl in de brandingpresentatie: post (realisatie), review en carrousel (expertvraag) (Eghosa).
+- 2026-11-21: postsstijl = redactioneel zoals de proef realisatie_proef_v3 (Eghosa: "eigenlijk niet slecht"); de templates v1/v2 vervallen.
 - 2026-11-21: Loni Bouw: stijl B is de favoriet van Eghosa; posts eerst in B (de klant kiest in de meeting).
 - 2026-11-21: repo op GitHub hernoemd naar `Eghosag1/creatieve-motor` (oude adres stuurt door); lokale mappen ongewijzigd (Eghosa: ja).
 - 2026-11-21: analyse en richting A Loni Bouw goedgekeurd; ideeën B en C goedgekeurd; naam "creatieve motor" voorgesteld (Eghosa).
