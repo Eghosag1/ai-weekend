@@ -4,10 +4,14 @@ Bijwerken na elke sessie (datum, wat gedaan, wat open, beslissingen). Nieuwste b
 
 ## Status
 Analyse klaar (`ANALYSE.md`), architectuur en bouwvolgorde in `CLAUDE.md`. Nog niets gebouwd.
-Stap 1 klaar (formaat goedgekeurd). Stap 2 gebouwd en getest op Loni Bouw; wacht op akkoord van Eghosa op de analyse en richting A.
-Volgende: stap 3 (richtingen B en C + stijlkaart).
+Stap 1 en 2 klaar (analyse en richting A goedgekeurd). Stap 3 gebouwd: richtingen B en C + stijlkaarten voor Loni Bouw;
+wacht op keuze of bijsturing van Eghosa. Volgende: stap 4 (posttemplates realisatie, review, expertvraag).
 
 ## Logboek
+- 2026-11-21 (sessie 4, vervolg): stap 3 in video-agent (commit `7605414f`): `huisstijl.py kaart` (stijlkaart 1080x1350:
+  postvoorbeeld op een echte foto, kleuren, fonts, knoppen, motief). Loni Bouw: B (donker, kapitalen) en C (logo als bron:
+  dakmotief, logoblauw, titels 900); overzicht `huisstijl/overzicht_2026-11-21.png`. Stijlkaarten (PNG) staan niet in git
+  (.gitignore), wel te maken uit de JSON.
 - 2026-11-21 (sessie 4, vervolg): stap 2 gebouwd in video-agent (`~/Desktop/video-agent`, commit `6232945d` op main; alleen de
   eigen bestanden gecommit, het andere videowerk niet aangeraakt): `tools/merkanalyse.py` (meting website: kleuren, fonts,
   radius, logo, socials, koppen, CTA's + screenshots), `tools/huisstijl.py` (controle, start, nieuw, lijst, css; versies als
@@ -27,6 +31,7 @@ Volgende: stap 3 (richtingen B en C + stijlkaart).
 - 2026-11-21: map aangemaakt met context uit het bouwplan.
 
 ## Beslissingen
+- 2026-11-21: analyse en richting A Loni Bouw goedgekeurd; ideeën B en C goedgekeurd; naam "creatieve motor" voorgesteld (Eghosa).
 - 2026-11-21: formaat huisstijlbestand goedgekeurd; alles wat creatief is komt in video-agent (Eghosa).
 - 2026-11-21: videostijl = 5 testclips die samen 1 video vormen (Eghosa).
 - 2026-11-21: alleen de branding agent; de rest uit de werkmap (Eghosa).
@@ -43,7 +48,7 @@ Volgende: stap 3 (richtingen B en C + stijlkaart).
 - 2026-11-21: taak 11 is volledig van Eghosa; de nachtploeg bouwde er niets inhoudelijks voor.
 
 ## Open vragen
-- Nieuwe naam voor video-agent op GitHub (alleen GitHub hernoemen, lokale mappen blijven): welke naam?
+- GitHub-repo hernoemen naar `creatieve-motor`: wacht op ja.
 - Eigen Instagram van Loni Bouw: bestaat die? (link op de site is van de webbouwer)
 - Welke testklant precies? Voorstel: Loni Bouw (recent, websitepagina's al bewaard, ook `projectcalculator.html`).
 - Formaat en plek van het huisstijlbestand in video-agent (voorstel volgt bij fase 1).
