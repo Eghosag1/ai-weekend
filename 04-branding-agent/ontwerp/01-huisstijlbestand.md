@@ -1,6 +1,6 @@
 # Stap 1: het huisstijlbestand (voorstel, 21/11/2026)
 
-Status: VOORSTEL, wacht op akkoord van Eghosa.
+Status: GOEDGEKEURD door Eghosa (21/11). Gebouwd in video-agent (commit `6232945d`): `templates/klant/huisstijl.json`, `tools/huisstijl.py`.
 
 ## Waarom
 
@@ -27,15 +27,13 @@ CSS-variabelen van de calculator). Niets aan `statics.py`, FilmCraft of de mailb
 Video Projecten/<Klant>/huisstijl/
   analyse.md               merkanalyse (stap 2), met screenshots en bronnen
   bronnen/                 screenshots van website en Instagram, logo-origineel
-  A/huisstijl.json         stijlrichting A (dicht bij het huidige merk)
-  B/huisstijl.json         stijlrichting B (gedurfder)
-  C/huisstijl.json         stijlrichting C (gedurfder)
-  A/stijlkaart.png …       één kaart per richting: kleuren, fonts, knoppen, voorbeeldtitel
-  gekozen.json             na de brandingmeeting: kopie van de gekozen richting, status VASTGELEGD
+  A/v1.json, v2.json …     stijlrichting A (dicht bij het huidige merk); hoogste versie = huidige
+  B/…, C/…                 stijlrichtingen B en C (gedurfder)
+  gekozen/v1.json          na de brandingmeeting: de gekozen richting, status vastgelegd
 ```
 
-Versies: elke wijziging = nieuwe versie (`versie` +1, `herkomst` ai of handmatig, `vorige` = vorige versie). Git bewaart de
-geschiedenis; het portaal bewaart de opgeleverde beelden. De agent werkt altijd verder op de hoogste versie.
+Versies: elke wijziging = nieuw bestand `v<N+1>.json` (`herkomst` ai of handmatig, `vorige`, `notitie`) via
+`tools/huisstijl.py nieuw`; terugzetten = `nieuw --van <n>`. Een versie wordt nooit overschreven.
 
 ## Velden
 

@@ -4,9 +4,16 @@ Bijwerken na elke sessie (datum, wat gedaan, wat open, beslissingen). Nieuwste b
 
 ## Status
 Analyse klaar (`ANALYSE.md`), architectuur en bouwvolgorde in `CLAUDE.md`. Nog niets gebouwd.
-Stap 1: voorstel huisstijlbestand in `ontwerp/01-huisstijlbestand.md`, wacht op akkoord. Testklant Loni Bouw.
+Stap 1 klaar (formaat goedgekeurd). Stap 2 gebouwd en getest op Loni Bouw; wacht op akkoord van Eghosa op de analyse en richting A.
+Volgende: stap 3 (richtingen B en C + stijlkaart).
 
 ## Logboek
+- 2026-11-21 (sessie 4, vervolg): stap 2 gebouwd in video-agent (`~/Desktop/video-agent`, commit `6232945d` op main; alleen de
+  eigen bestanden gecommit, het andere videowerk niet aangeraakt): `tools/merkanalyse.py` (meting website: kleuren, fonts,
+  radius, logo, socials, koppen, CTA's + screenshots), `tools/huisstijl.py` (controle, start, nieuw, lijst, css; versies als
+  `v<N>.json`, nooit overschreven), `templates/klant/huisstijl.json`, `15_BRANDING.md`, skill `branding`. Test op Loni Bouw:
+  `huisstijl/analyse.md`, `A/v1.json`, `A/v2.json` (logokleuren gemeten: #27A5DE en #A9AAAF; klantbrein had schattingen).
+  Gevonden: Instagram-link op de site is van de webbouwer (Elmedia), niet van Loni Bouw.
 - 2026-11-21 (sessie 4): stap 1 gestart. Stijlbestanden gelezen (`stijl.json`, `tekststijlen.json`, `config/motion.json`,
   `_social/abbi_stijl.py`, klantbrein Loni Bouw §2-3, mail-bot `KLANTBREIN.md`/`STIJL.md`, calculator `perf-calculator`).
   Voorstel: één `huisstijl.json` per klant en richting, met vertalers naar de bestaande bestanden.
@@ -20,6 +27,7 @@ Stap 1: voorstel huisstijlbestand in `ontwerp/01-huisstijlbestand.md`, wacht op 
 - 2026-11-21: map aangemaakt met context uit het bouwplan.
 
 ## Beslissingen
+- 2026-11-21: formaat huisstijlbestand goedgekeurd; alles wat creatief is komt in video-agent (Eghosa).
 - 2026-11-21: videostijl = 5 testclips die samen 1 video vormen (Eghosa).
 - 2026-11-21: alleen de branding agent; de rest uit de werkmap (Eghosa).
 - 2026-11-21: architectuur zoals in `CLAUDE.md`: Client Check = goedgekeurde huisstijl, portaal "Opstart" = werkplaats,
@@ -35,6 +43,8 @@ Stap 1: voorstel huisstijlbestand in `ontwerp/01-huisstijlbestand.md`, wacht op 
 - 2026-11-21: taak 11 is volledig van Eghosa; de nachtploeg bouwde er niets inhoudelijks voor.
 
 ## Open vragen
+- Nieuwe naam voor video-agent op GitHub (alleen GitHub hernoemen, lokale mappen blijven): welke naam?
+- Eigen Instagram van Loni Bouw: bestaat die? (link op de site is van de webbouwer)
 - Welke testklant precies? Voorstel: Loni Bouw (recent, websitepagina's al bewaard, ook `projectcalculator.html`).
 - Formaat en plek van het huisstijlbestand in video-agent (voorstel volgt bij fase 1).
 - Instagram analyseren: zonder koppeling alleen via screenshots of de publieke pagina. Volstaat dat?
