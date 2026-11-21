@@ -8,6 +8,11 @@ Stap 1 tot 4 gebouwd voor Loni Bouw: analyse, richtingen A/B/C met stijlkaart, 3
 Volgende: posts in het portaal (campagne "Opstart"), dan stap 6 (nieuwsbrief).
 
 ## Logboek
+- 2026-11-21 (sessie 4, vervolg): nieuw proces (Eghosa): eerst screenshots van posts die bij de klant passen, daaruit alle
+  uitingen. Eén richting per klant (geen A/B/C meer). Pakket: post, review, carrousel, nieuwsbrief, Facebook-banner,
+  profielfoto, videostijl (5 clips = 1 video), calculator, brandingpresentatie, huisstijl in Client Check.
+  Referentie 01 (bankposts: afgeronde blauwe vlakken, uitgeknipte mensen, icoontegels) in `Loni Bouw/huisstijl/referenties/`.
+  Uitsnedes uit de werfshoot met `onderwerpmasker` (foto's van de site te klein). Proef v4 in `B/proef/v4/`.
 - 2026-11-21 (sessie 4, vervolg): proef v2 afgekeurd ("shit"). Correcties van Eghosa: niet "ingetogen" (proef v3 van de
   realisatie was goed), en geen vaste templates: per klant eigen posts vanuit hun huisstijl, fantaseren mag. Regels en
   geheugen bijgewerkt. Proef v3 Loni Bouw met de dakvorm uit het logo als beeldidee (`B/proef/v3/`: post, review, carrousel).
@@ -51,6 +56,7 @@ Volgende: posts in het portaal (campagne "Opstart"), dan stap 6 (nieuwsbrief).
 - 2026-11-21: map aangemaakt met context uit het bouwplan.
 
 ## Beslissingen
+- 2026-11-21: één stijlrichting per klant, vanuit screenshots die Eghosa aanlevert (Eghosa). Banners: alleen Facebook. Videostijl en calculator horen bij het pakket. Nieuw: Facebook-banner en profielfoto.
 - 2026-11-21: geen vaste posttemplates voor alle klanten; per klant eigen ontwerp vanuit de huisstijl (Eghosa). `tools/brandingposts.py` vervalt als aanpak.
 - 2026-11-21: de vaste uitingen per stijl in de brandingpresentatie: post (realisatie), review en carrousel (expertvraag) (Eghosa).
 - 2026-11-21: postsstijl = redactioneel zoals de proef realisatie_proef_v3 (Eghosa: "eigenlijk niet slecht"); de templates v1/v2 vervallen.
