@@ -8,6 +8,9 @@ Loni Bouw: merkanalyse en huisstijlbestand klaar; posts in proef (richting uit r
 Volgende: akkoord op de posts, dan Facebook-banner, profielfoto, nieuwsbrief, videostijl, calculator, presentatie.
 
 ## Logboek
+- 2026-11-21 (sessie 4, vervolg): Roozenburg v1 "mag allemaal wat simplistischer; niet altijd informatief, anders ben je
+  er na 20 posts door". Regel 9 in `15_BRANDING.md`. Proef v2 (`Roozenburg/huisstijl/proef/v2/`, commit `b98b5f99`): payoff
+  op foto, alleen het citaat, werkwijze in beelden met één zin per slide.
 - 2026-11-21 (sessie 4, vervolg): tweede klant Roozenburg (aanpak van Loni v7 met referentie 01, in de huisstijl van
   Roozenburg: oranje, zwart, linnen, rechte hoeken, oranje verticale lijn). Merkmeting, logo en professionele foto's van
   roozenburgdakwerken.be, uitsnedes, echte inhoud (kop "Jouw dak, ons meesterwerk", Google-review van Koen, 3 FAQ's).
