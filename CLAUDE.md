@@ -43,7 +43,7 @@ Alle repo's staan op GitHub en op deze laptop in `~/Developer/`, behalve video-a
 | --- | --- |
 | `Red-Pepper-Antwerp/ClientsCheck` | Klantbrein: de definitief goedgekeurde huisstijl; MCP-server waar andere agents lezen |
 | `Red-Pepper-Antwerp/revenuelab-portaal` | Campagne "Opstart": concepten, versies, opmerkingen, goedkeuring, presentatie |
-| `Eghosag1/video-agent` | Productie: merkanalyse, posts/statics, videostijl en testclips, (straks ook) mails |
+| `Eghosag1/creatieve-motor` (vroeger video-agent; lokale map blijft `~/Desktop/video-agent`) | Productie: merkanalyse, posts/statics, videostijl en testclips, (straks ook) mails |
 | `Eghosag1/mail-bot` | Nieuwsbrief: stijlronde en bouwdoos (wordt samengevoegd in video-agent, zie VOORTGANG) |
 | `Red-Pepper-Antwerp/night-shift-thibo` | Calculatorsjabloon (`dag/2026-11-19/perf-calculator/`) en calculatorregels |
 | `Red-Pepper-Antwerp/red-pepper-connector-vault` | Wrike-taken (`wrike-run`), Google (`google-run`), met goedkeuringszin |

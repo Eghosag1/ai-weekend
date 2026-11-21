@@ -31,6 +31,7 @@ wacht op keuze of bijsturing van Eghosa. Volgende: stap 4 (posttemplates realisa
 - 2026-11-21: map aangemaakt met context uit het bouwplan.
 
 ## Beslissingen
+- 2026-11-21: repo op GitHub hernoemd naar `Eghosag1/creatieve-motor` (oude adres stuurt door); lokale mappen ongewijzigd (Eghosa: ja).
 - 2026-11-21: analyse en richting A Loni Bouw goedgekeurd; ideeën B en C goedgekeurd; naam "creatieve motor" voorgesteld (Eghosa).
 - 2026-11-21: formaat huisstijlbestand goedgekeurd; alles wat creatief is komt in video-agent (Eghosa).
 - 2026-11-21: videostijl = 5 testclips die samen 1 video vormen (Eghosa).
@@ -48,7 +49,6 @@ wacht op keuze of bijsturing van Eghosa. Volgende: stap 4 (posttemplates realisa
 - 2026-11-21: taak 11 is volledig van Eghosa; de nachtploeg bouwde er niets inhoudelijks voor.
 
 ## Open vragen
-- GitHub-repo hernoemen naar `creatieve-motor`: wacht op ja.
 - Eigen Instagram van Loni Bouw: bestaat die? (link op de site is van de webbouwer)
 - Welke testklant precies? Voorstel: Loni Bouw (recent, websitepagina's al bewaard, ook `projectcalculator.html`).
 - Formaat en plek van het huisstijlbestand in video-agent (voorstel volgt bij fase 1).
