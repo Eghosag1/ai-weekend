@@ -8,6 +8,10 @@ Stap 1 tot 4 gebouwd voor Loni Bouw: analyse, richtingen A/B/C met stijlkaart, 3
 Volgende: posts in het portaal (campagne "Opstart"), dan stap 6 (nieuwsbrief).
 
 ## Logboek
+- 2026-11-21 (sessie 4, vervolg): algemene feedback op de posts (geen logo behalve eindslide, niet altijd titel + zin, geen
+  AI-slop, geen voetregel, variatie in layout en kleur) vastgelegd in `15_BRANDING.md` en `13_SOCIALPOSTS.md`, met de
+  interpretatie van zijn visuele keuzes; ook in het geheugen van Claude. Proef v2: post (donker), review (wit), carrousel
+  (randloze cover, witte slides, donkere eindslide met logo) als PNG's in `Loni Bouw/huisstijl/B/proef/v2/`.
 - 2026-11-21 (sessie 4, vervolg): posts v2 "zien er echt niet goed uit" (Eghosa). Oorzaak: advertentiemotor (knop, kicker,
   feiten, vakken) en geen idee per post. Referentie: socialstatics FM/ABBI van 18/11 (sessiemap; de echte posts staan op de
   andere laptop, Eghosa zoekt ze). Nieuwe redactionele stijl als proef in `Loni Bouw/huisstijl/B/proef/` (commit `6142baaa`):
