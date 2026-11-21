@@ -3,9 +3,15 @@
 Bijwerken na elke sessie (datum, wat gedaan, wat open, beslissingen). Nieuwste bovenaan.
 
 ## Status
-Plan klaar en besproken; nog niets gebouwd.
+Eerste versie van de skill klaar (`skill/`), getest op papier met een anonieme testklant (`voorbeelden/testklant/`).
+Nog niet geïnstalleerd en nog niet in video-agent.
 
 ## Logboek
+- 2026-11-21 (sessie 3): skill gebouwd door een achtergrondagent en nagekeken: `skill/SKILL.md`, `skill/scriptbriefing-sjabloon.md`,
+  `skill/script-sjabloon.md`. Testrun: `voorbeelden/testklant/scriptbriefing_v1.md` + `scripts_v1.md` (S1 volledig, 30-34 woorden,
+  2 hooks met visuele hook; S2 en S3 bewust open tot vraag 5 en 6 beantwoord zijn; zelfcontrole onderaan). Het voorbeeld eerst op EGS
+  gemaakt en daarna geanonimiseerd (geen echte klantgegevens in git). Spreektekst van de prijs aangepast tot voorbeeldprijs van
+  deze ene installatie. Velden CTA (h4) en beeldmateriaal (h5) toegevoegd aan de scriptbriefing.
 - 2026-11-21 (sessie 2): bronnen en repo's gelezen (alleen lezen). Formaat van de scriptbriefing en plan voor de bot opgesteld,
   uitgewerkt met het EGS-voorbeeld (zie hieronder). CLAUDE.md van de map gecorrigeerd: `BRIEFING.md` toont 8 scripts per klant (niet 3),
   pad van `teksten.py`, bestaand sjabloon `templates/briefing.md`, oude tabel `strategy_scripts` in Client Check.
@@ -28,18 +34,15 @@ huisstijl, aanspreekvorm en verboden woorden (klantbrein §6). Onbekend blijft `
 5. Uitvoer: leesbaar voor de videobot (per script naar `01_SCRIPT.md`) en een script per dia voor het kick-offdeck (03).
 6. Thibo kijkt na (±15 min), ook de prijs.
 
-**EGS-voorbeeld (concept, alleen feiten uit de briefing):**
-- S1 "Wat kost het vandaag?", persoon in beeld bij Peter thuis. H01 "Wat kosten 12 zonnepanelen met een thuisbatterij vandaag?",
-  H02 "Zonnepanelen én een batterij van 10 kWh: wat betaal je daar nu voor?". Spreektekst: "Hier bij Peter plaatsten we 12
-  zonnepanelen en een thuisbatterij van 10 kWh. Wat kost dat vandaag? Voor deze installatie: ongeveer 7.000 euro." Vlag: open (v8).
-- S2 voice-over op werfbeelden; USP open (v5), plaats batterij onbekend.
-- S3 vraag & antwoord; vraag open (v6). Zonder antwoord uit de briefing wordt S3 niet geschreven.
+**Testklant:** zie `voorbeelden/testklant/` (anoniem; alleen de cijfers uit het voorbeeld in de briefing, r. 64).
 
 ## Beslissingen
 - 2026-11-21: standaard 3 scripts met elk 2 hooks per klant (Eghosa).
-- 2026-11-21: het EGS-voorbeeld blijft voorlopig in deze map; geen klantmap in video-agent tot EGS echt video's krijgt (Eghosa).
+- 2026-11-21: we testen de scripttool met een anonieme testklant, niet met EGS (geen echte klantgegevens in git). Geen klantmap in video-agent tot een klant echt scripts krijgt (Eghosa).
+- 2026-11-21: de scriptbriefing krijgt ook de velden CTA en beeldmateriaal (nodig voor het einde in `01_SCRIPT.md`).
 
 ## Open vragen
-- Klantmap "EGS Projects" in video-agent: later, en in welke kloon (`~/Developer/video-agent` of `~/Desktop/video-agent`)?
-- Regio, promotie, USP's, bezwaren en wie in beeld bij EGS: onbekend (komt uit de onboardingcall).
-- De prijs in een script (bv. ±€7.000) komt van de klant; Thibo bevestigt bij het nakijken.
+- Waar komt de skill uiteindelijk: in video-agent (welke kloon: `~/Developer/video-agent` of `~/Desktop/video-agent`) of in het teamaccount?
+- De prijs in een script komt van de klant; Thibo bevestigt bij het nakijken (ook btw en premie).
+- Deckregel 8 (drie hooks uit klantvragen) kan pas gehaald worden met antwoorden op vraag 6.
+- De bouwspecificatie (PDF) is niet gelezen door de agent (geen PDF-tools); de nieuwste briefing is gevolgd.

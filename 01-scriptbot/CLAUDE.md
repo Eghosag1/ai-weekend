@@ -32,7 +32,7 @@ met per script de vlag "klant acteert zelf" of "acteur nodig". De scripts worden
 - [ ] Uitvoer leesbaar voor de videobot (in de klantmap) en bruikbaar als dia in het kick-offdeck (03).
 
 ## Klaar als
-- Voor een testklant (EGS-voorbeeld) levert de bot scripts met de echte prijs en installatie, zonder verzonnen claims.
+- Voor de anonieme testklant (cijfers uit het EGS-voorbeeld in de briefing, `voorbeelden/testklant/`) levert de bot scripts met de echte prijs en installatie, zonder verzonnen claims.
 - Thibo kan ze in ongeveer 15 minuten nakijken (controlemoment uit de briefing).
 
 ## Werk in

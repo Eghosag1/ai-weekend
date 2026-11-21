@@ -3,9 +3,15 @@
 Bijwerken na elke sessie (datum, wat gedaan, wat open, beslissingen). Nieuwste bovenaan.
 
 ## Status
-Plan klaar; samenwerk met Thibo afgesproken. Nog niets gebouwd.
+Eerste versie van de skill klaar (`skill/SKILL.md`), met `huisregels.md` (CONCEPT), `briefing-per-type.md` (deel Eghosa
+klaar, deel Thibo leeg) en `tests.md` (4 testgevallen op papier). Nog niet gedraaid en nog niet geïnstalleerd.
 
 ## Logboek
+- 2026-11-21 (sessie 3): skill gebouwd door een achtergrondagent en nagekeken. Verder op het concept van de nachtploeg, met:
+  klant + klantcode bepalen (code uit bestaande Wrike-titels, anders vragen), eerst bestaande taak zoeken (dan reactie i.p.v.
+  nieuwe taak), tonen en pas na "ok" aanmaken, teruglezen, vaste blokken in de beschrijving, extra nooit-regels.
+  Bronverwijzingen gecorrigeerd (o.a. `00_START_HIER.md:91`, `10_ADVERTENTIETEKSTEN.md` §2 punt 3, `09_OPDRACHTEN.md:43-48`).
+  Regel 8 van de nachtploeg ("vandaag op Done") niet als huisregel: gaat over afwerking, niet over briefing (vraag in `huisregels.md`).
 - 2026-11-21 (sessie 2): bronnen en repo's gelezen (alleen lezen). Gevonden: concept-skill `wrike-briefing` van de nachtploeg
   (`night-shift-thibo/dag/2026-11-21/briefing-skill/SKILL.md`). Plan voor de skill en een concept van 10 huisregels met bron opgesteld.
   Lijst "wat er in design-, video- en shoottaken altijd in de briefing moet" opgesteld voor Thibo (zie hieronder). CLAUDE.md van de
@@ -51,6 +57,7 @@ Niet gecontroleerd: of de Wrike-briefings zelf zo vaag waren (Wrike niet gelezen
   Wannes de huisregels aan en installeren ze de skill voor het team. We bouwen verder op het concept van de nachtploeg.
 
 ## Open vragen
+- Zijn Fireflies en Gmail beschikbaar in het teamaccount van Claude? (de skill gebruikt ze "als die koppeling er is")
 - Wat betekent NN in het titelformaat `NN | KLANTCODE omschrijving`? (gevraagd aan Thibo)
 - Wrike-mapstructuur per klant (welke map per soort taak)?
 - Installatie in het teamaccount van Claude: wie doet het (Claude Code kan dat niet volgens de nachtploeg)?
