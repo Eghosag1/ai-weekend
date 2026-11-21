@@ -4,10 +4,15 @@ Bijwerken na elke sessie (datum, wat gedaan, wat open, beslissingen). Nieuwste b
 
 ## Status
 Analyse klaar (`ANALYSE.md`), architectuur en bouwvolgorde in `CLAUDE.md`. Nog niets gebouwd.
-Stap 1 en 2 klaar (analyse en richting A goedgekeurd). Stap 3 gebouwd: richtingen B en C + stijlkaarten voor Loni Bouw;
-wacht op keuze of bijsturing van Eghosa. Volgende: stap 4 (posttemplates realisatie, review, expertvraag).
+Stap 1 tot 4 gebouwd voor Loni Bouw: analyse, richtingen A/B/C met stijlkaart, 3 posts per richting (B = favoriet van Eghosa).
+Volgende: posts in het portaal (campagne "Opstart"), dan stap 6 (nieuwsbrief).
 
 ## Logboek
+- 2026-11-21 (sessie 4, vervolg): stap 4 in video-agent (commit `e9b6b729`): `tools/brandingposts.py`: realisatie, review,
+  expertvraag (feed 4:5) op de bouwstenen en controle van `statics.py`, met een vertaler huisstijl → statics-stijl. Inhoud
+  Loni Bouw in `huisstijl/posts_inhoud.json`, alleen echte bronnen: foto's van de site, getuigenis van de site ("Fijn overleg
+  en slimme ideeën. Dat geeft vertrouwen."), vraag en punten uit het goedgekeurde script 3. Alle 9 posts IN ORDE.
+  Eerste render afgekeurd op tekstgrootte (min. 45 px): teksten vergroot.
 - 2026-11-21 (sessie 4, vervolg): stap 3 in video-agent (commit `7605414f`): `huisstijl.py kaart` (stijlkaart 1080x1350:
   postvoorbeeld op een echte foto, kleuren, fonts, knoppen, motief). Loni Bouw: B (donker, kapitalen) en C (logo als bron:
   dakmotief, logoblauw, titels 900); overzicht `huisstijl/overzicht_2026-11-21.png`. Stijlkaarten (PNG) staan niet in git
@@ -31,6 +36,7 @@ wacht op keuze of bijsturing van Eghosa. Volgende: stap 4 (posttemplates realisa
 - 2026-11-21: map aangemaakt met context uit het bouwplan.
 
 ## Beslissingen
+- 2026-11-21: Loni Bouw: stijl B is de favoriet van Eghosa; posts eerst in B (de klant kiest in de meeting).
 - 2026-11-21: repo op GitHub hernoemd naar `Eghosag1/creatieve-motor` (oude adres stuurt door); lokale mappen ongewijzigd (Eghosa: ja).
 - 2026-11-21: analyse en richting A Loni Bouw goedgekeurd; ideeën B en C goedgekeurd; naam "creatieve motor" voorgesteld (Eghosa).
 - 2026-11-21: formaat huisstijlbestand goedgekeurd; alles wat creatief is komt in video-agent (Eghosa).
@@ -49,6 +55,8 @@ wacht op keuze of bijsturing van Eghosa. Volgende: stap 4 (posttemplates realisa
 - 2026-11-21: taak 11 is volledig van Eghosa; de nachtploeg bouwde er niets inhoudelijks voor.
 
 ## Open vragen
+- Loni Bouw: echte Google-review (met sterren en voornaam), gemeente/oppervlakte/doorlooptijd van de realisatie (`posts_inhoud.json`, veld open).
+- Brandingposts mogen een klein logo dragen? De statics-regel verbiedt een logo-overlay (advertenties); voor organische posts misschien anders.
 - Eigen Instagram van Loni Bouw: bestaat die? (link op de site is van de webbouwer)
 - Welke testklant precies? Voorstel: Loni Bouw (recent, websitepagina's al bewaard, ook `projectcalculator.html`).
 - Formaat en plek van het huisstijlbestand in video-agent (voorstel volgt bij fase 1).
