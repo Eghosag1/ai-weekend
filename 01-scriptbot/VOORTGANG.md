@@ -12,7 +12,7 @@ Live zetten (Eghosa, in deze volgorde):
    en `_terug.sql` (lokaal proefgedraaid: live → terug → live, daarna 88 tests groen).
 2. `scripts/clientcheck.sh sql live/20261121200000_live.sql` (één transactie; stopt zelf als Client Check niet op
    20261120120000 staat). Terug: `_terug.sql`.
-3. De Edge Function `portaal-bot` opnieuw deployen (nieuwe acties klantfeiten, klantfeiten_voorstellen, transcripties,
+3. `scripts/clientcheck.sh functies` (de Edge Function `portaal-bot` met de nieuwe acties klantfeiten, klantfeiten_voorstellen, transcripties,
    scriptronde, scripts_opleveren).
 4. De app: `scripts/clientcheck.sh app`.
 5. Op de laptop met de werker: `git pull` in creatieve-motor (de werker kent dan taaksoort `scripts`).
