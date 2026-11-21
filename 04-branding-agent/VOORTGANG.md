@@ -8,6 +8,10 @@ Loni Bouw: merkanalyse en huisstijlbestand klaar; posts in proef (richting uit r
 Volgende: akkoord op de posts, dan Facebook-banner, profielfoto, nieuwsbrief, videostijl, calculator, presentatie.
 
 ## Logboek
+- 2026-11-21 (sessie 4, vervolg): tweede klant Roozenburg (aanpak van Loni v7 met referentie 01, in de huisstijl van
+  Roozenburg: oranje, zwart, linnen, rechte hoeken, oranje verticale lijn). Merkmeting, logo en professionele foto's van
+  roozenburgdakwerken.be, uitsnedes, echte inhoud (kop "Jouw dak, ons meesterwerk", Google-review van Koen, 3 FAQ's).
+  Proef v1 in `Roozenburg/huisstijl/proef/v1/` (commit `f62f7350`).
 - 2026-11-21 (sessie 4, vervolg): v6 "al beter", maar titels te veel regelafstand en elementen te krap. Regel 8 (titels
   ±0,9, ≥ ±60 px lucht tussen elementen, ±70 px tot de rand). Proef v7 (`B/proef/v7/`, commit `6b95fd63`).
 - 2026-11-21 (sessie 4, vervolg): v5 "goede richting, nog veel lege ruimte". Regel 7: lege ruimte = grotere foto's en/of tekst,
