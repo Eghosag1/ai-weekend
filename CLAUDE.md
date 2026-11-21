@@ -37,7 +37,7 @@ de git-geschiedenis, laatste stand met alles: commit `f482e06`).
 
 ## Waar de code staat
 
-Alle repo's staan op GitHub en op deze laptop in `~/Developer/`. Elke repo heeft een eigen CLAUDE.md of AGENTS.md; die gaat voor.
+Alle repo's staan op GitHub en op deze laptop in `~/Developer/`, behalve video-agent (zie onder). Elke repo heeft een eigen CLAUDE.md of AGENTS.md; die gaat voor.
 
 | Repo | Rol in de branding agent |
 | --- | --- |
@@ -49,8 +49,9 @@ Alle repo's staan op GitHub en op deze laptop in `~/Developer/`. Elke repo heeft
 | `Red-Pepper-Antwerp/red-pepper-connector-vault` | Wrike-taken (`wrike-run`), Google (`google-run`), met goedkeuringszin |
 | `Red-Pepper-Antwerp/sprout-lead-core-new` | Strilio: nieuwsbrieven versturen met klikmeting, leads uit de calculator (later) |
 
-**video-agent:** de echte werkkopie is `~/Desktop/video-agent` (daar draaien de videojobs, de worktrees en de launchd-taak
-`be.redpepper.feedbackronde`). `~/Developer/video-agent` is een kopie op dezelfde commit; samenvoegen staat in VOORTGANG.
+**video-agent staat als enige repo op het bureaublad: `~/Desktop/video-agent`** (beslist 21/11; daar draaien de videojobs,
+de worktrees en de launchd-taak `be.redpepper.feedbackronde`). Er is geen tweede kloon meer in `~/Developer`.
+Geef hem erbij met `claude --add-dir ~/Desktop/video-agent`.
 
 ## Bronnen
 

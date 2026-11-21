@@ -4,7 +4,7 @@ Bijwerken na elke sessie (datum, wat gedaan, wat open, beslissingen). Nieuwste b
 
 ## Status
 Analyse klaar (`ANALYSE.md`), architectuur en bouwvolgorde in `CLAUDE.md`. Nog niets gebouwd.
-Volgende stap: kloons van video-agent samenvoegen + mail-bot erin (na ja), dan fase 1.
+Volgende stap: fase 1 (formaat huisstijlbestand + merkanalyse), testklant Loni Bouw.
 
 ## Logboek
 - 2026-11-21 (sessie 3): nieuwe briefing van Eghosa (`00-bronnen/briefing-branding-2026-11-21.md`). Werkmap opgeruimd: alleen
@@ -25,7 +25,9 @@ Volgende stap: kloons van video-agent samenvoegen + mail-bot erin (na ja), dan f
 - 2026-11-21: stijlrichtingen: A dicht bij het huidige merk, B en C gedurfder binnen het eigen logo en de eigen kleuren.
 - 2026-11-21: brandingpresentatie als HTML-template die zich vult, export naar PDF (geen Google Slides).
 - 2026-11-21: testen met een recente klant die al een klantmap in video-agent heeft; echte gegevens blijven in video-agent.
-- 2026-11-21: de twee kloons van video-agent samenvoegen en mail-bot erin opnemen (uitvoering na ja op het concrete plan).
+- 2026-11-21: video-agent: alleen de kloon op het bureaublad (`~/Desktop/video-agent`) blijft; de schone kopie in
+  `~/Developer/video-agent` is verwijderd (gecontroleerd: geen wijzigingen, stashes, eigen commits of worktrees).
+- 2026-11-21: mail-bot als map in video-agent opnemen: uitgesteld, niet nodig voor fase 1.
 - 2026-11-21: taak 11 is volledig van Eghosa; de nachtploeg bouwde er niets inhoudelijks voor.
 
 ## Open vragen
