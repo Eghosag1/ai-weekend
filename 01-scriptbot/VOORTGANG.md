@@ -33,6 +33,7 @@ wacht op het nakijken door Eghosa (vragen in §7 daar). Daarna stap 2 (portaal).
   `Red-Pepper-Antwerp/scriptbot`. Aan het einde een standaardprompt die alles voor hen instelt.
 - Werkkopie portaal: `~/Desktop/revenuelab-portaal`.
 - Bouwvolgorde goedgekeurd; beginnen met stap 1.
+- Klant ziet alleen de tekst; richtduur ±35 s, langer of korter op vraag in de aanvraag.
 - De ±89 oude scripts eenmalig in het portaal als "eerder gebruikt", onzichtbaar voor de klant.
 
 ## Open vragen

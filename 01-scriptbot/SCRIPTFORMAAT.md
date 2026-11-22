@@ -43,7 +43,8 @@ Feiten        elk gebruikt feit met bron en datum
 | **Filmen** | *kader* (wijd / medium / close-up), *plek* op de locatie, *actie* van de spreker (stapt naar de camera, wijst, houdt iets vast), en eventueel *extra beeld*: wat Hermann los filmt voor deze take (±3-5 s per shot) |
 | **Montage** | één naam uit de woordenlijst (§3) + **waarom** in één regel. Standaard `geen`. |
 
-Richtduur (MP §1): hook ±2,5–6,5 s, body ±15–30 s, CTA-module ±10 s, afsluiter ±2–6 s.
+Richtduur (MP §1, beslist 22/11): standaard ±35 s in totaal (hook ±2,5–6,5 s, body ±15–30 s, CTA-module ±10 s, afsluiter
+±2–6 s). Vraagt de gebruiker een andere lengte ("maak het 60 seconden"), dan volgt de bot die en zet hij ze in de kop.
 
 ### Feiten
 Per feit: *wat* (letterlijk zoals in het script), *bron* (gesprek of mail in Client Check + datum), *take*. Een feit zonder
@@ -60,7 +61,7 @@ boodschap sterker of duidelijker maakt, altijd met een reden. Richtwaarde: in ee
 | `beeld` | schermvullend beeld over de stem dat het gezegde meteen toont | een eigenschap, claim of onzichtbaar probleem ("waterdicht", "warmteverlies"), of een resultaat dat je moet zien | MP §5 |
 | `beeld_achter_spreker` | spreker vrijgesneden, beeld als paneel erachter | een concrete plaats of context ("in Mechelen", "op deze werf") | MP §5, §8 |
 | `opsomming` | één beeld per punt, wisselt op het woord | 3 of meer punten die je kunt tonen | MP §5 |
-| `overlay` | korte tekst of structuur in beeld (bv. 1/3, 2/3, 3/3) | alleen als die de structuur verduidelijkt; nooit als herhaling van de captions | MP §10b |
+| `overlay` | korte tekst in beeld die geen ondertitel is (bv. `STAP 1/3` bovenaan, of `15 JAAR GARANTIE` naast de spreker) | spaarzaam: alleen als die de structuur verduidelijkt; nooit als herhaling van de captions | MP §10b |
 | `cta_module` | de tool van de klant (bv. de calculator) nagebouwd en geanimeerd, naast de spreker; prijs altijd als vork | de CTA verwijst naar de tool of website van de klant | MP §10 |
 | `vrij` | idee buiten de lijst, in gewone woorden | alleen als niets uit de lijst past; de videobot vraagt het na in plaats van te gokken | |
 
@@ -73,7 +74,7 @@ en binnen-/buitenbeeld volgt het onderwerp.
 | Wie | Ziet |
 | --- | --- |
 | **Chat** (Hermann, Gini) | alles: kop, hooks met visuele hook, takes met filmen en montage, feiten |
-| **Portaal: klant** | alleen de tekst: titel, de hooks, daarna de takes als lopende tekst |
+| **Portaal: klant** | alleen de tekst: titel, de hooks, daarna de takes als lopende tekst (beslist 22/11: geen locatie, filmen of montage) |
 | **Portaal: team en videobot** | alles, ook als JSON (§6) |
 
 Uit alle scripts van één aanvraag maakt de bot ook de **shootlijst per plek** voor Hermann: wat er op elke plek gefilmd
@@ -174,7 +175,8 @@ in de chat, T3) · "tot eind december gratis" (mail 19/11, geldig t/m 31/12, T4)
 ```
 
 ## 7. Na te kijken door Eghosa
-1. Klopt de lijst in §1 (wat de videobot altijd zelf doet en dus niet in het script staat)?
-2. De woordenlijst in §3: ontbreekt er iets, of moet er iets uit? (`overlay` is het minst onderbouwd.)
-3. Moet de klant ook zien *waar* er gefilmd wordt, of echt alleen de tekst?
-4. Richtduur: houden we die van MP §1, of een vast aantal woorden per script?
+1. Klopt de lijst in §1 (wat de videobot altijd zelf doet en dus niet in het script staat), of wil je daar iets per video
+   zelf kiezen (bv. muziek)?
+2. `overlay` houden, spaarzaam gebruikt? (voorstel: ja)
+
+Beslist 22/11: klant ziet alleen de tekst; richtduur ±35 s, aan te passen per aanvraag.
