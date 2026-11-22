@@ -4,20 +4,18 @@ Bijwerken na elke sessie (datum, wat gedaan, wat open, beslissingen). Nieuwste b
 (sessies 3-6, 21/11) staat in de git-geschiedenis (commit `3df99f5`).
 
 ## Status
-Stap 1 klaar (`SCRIPTFORMAAT.md`). Stap 2 (portaal) gebouwd en lokaal getest, **nog niet live**: revenuelab-portaal
-(`~/Desktop/revenuelab-portaal`) commits `776ece6` en `c54577b`. Volgende: Eghosa zet live (hieronder), dan stap 3 (plugin).
-
-Live zetten (Eghosa, in `~/Desktop/revenuelab-portaal`, in deze volgorde):
-1. `git pull`, dan `/usr/bin/python3 scripts/migratie_live.py 20261121200000` (maakt `live/20261121200000_live.sql` en
-   `_terug.sql`; lokaal proefgedraaid: live → terug → live, tweede keer weigert).
-2. `scripts/clientcheck.sh sql live/20261121200000_live.sql` (één transactie; stopt zelf als het portaal niet op
-   20261120120000 staat). Terug: `_terug.sql`.
-3. `scripts/clientcheck.sh functies` (portaal-bot, portaal-klant, portaal-export en de nieuwe portaal-mcp; controleert dat
-   portaal-mcp zonder login 401 geeft).
-4. `scripts/clientcheck.sh app`.
-5. Hermann lid maken van het portaal (Beheer → Leden); Gini is al lid.
+Stap 1 klaar (`SCRIPTFORMAAT.md`). Stap 2 (portaal) **live sinds 22/11**: revenuelab-portaal (`~/Desktop/revenuelab-portaal`)
+commits `776ece6` en `c54577b`. Volgende: stap 3 (plugin `Red-Pepper-Antwerp/scriptbot`). Hermann nog lid maken van het
+portaal (Beheer → Leden).
 
 ## Logboek
+- 2026-11-22 (sessie 7, live): het ontwerp van 21/11 bleek wél live te staan (in de notities stond van niet). Het nieuwe
+  live-script weigerde daarom (één transactie, niets veranderd). Oud terugdraaiscript gemaakt
+  (`live/20261121200000_oud_terug.sql`), lokaal getest (oud eraf, nieuw erop, tests groen) en nagekeken tegen live (alleen
+  lezen). Eghosa draaide: oud terug, nieuw live, functies, app. Weg: de proef van de nacht bij EVM dakwerken (1 ronde, 3
+  scripts, 18 klantfeiten). Nagekeken (alleen lezen): schema op 20261121200000, nieuwe tabellen en 8 functies, 4 regels,
+  geen oude tabellen; portaal-mcp geeft zonder login 401 met de juiste plek om in te loggen, portaal-klant 404 bij een
+  onbekende link, portaal-bot 401 zonder sleutel.
 - 2026-11-22 (sessie 7, stap 2): portaal gebouwd in `~/Desktop/revenuelab-portaal`. Het scriptwerk van 21/11 (rondes,
   versies, klantfeiten, werkertaak, koppeling met campagnes; nooit live) teruggezet naar `46c7256` en vervangen:
   - Migratie `20261121200000` herschreven: `scripts` (per klant S1, S2; inhoud met regie; status wacht_op_klant →
