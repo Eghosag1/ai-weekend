@@ -30,9 +30,11 @@ chat → finaal in het portaal; de klant keurt goed of geeft opmerkingen; daarna
 6. **Klant in het portaal** ziet alleen de tekst; keurt goed of geeft opmerkingen.
 7. **Opmerkingen**: in Claude Code "verwerk de opmerkingen van de klant op <klant>" → het script wordt vervangen en gaat
    terug naar de klant. De opmerkingen blijven staan (waarom het veranderde).
-8. **Na akkoord** leest de videobot het script met de regie uit het portaal (`portaal-bot`).
+8. **Na akkoord** leest de videobot het script met de regie uit het portaal (`portaal-bot`, actie `scripts`), bv. "monteer
+   S2 van Loni Bouw". Geen koppeling met campagnes en geen "naar productie" (beslist 22/11).
 
-De klant verwittigen doet Romina; de bot zet hoogstens een concept in Vandaag.
+De scriptlink (één per klant) stuurt wie het script maakte (Hermann of Gini) zelf door, niet Romina (Eghosa, 22/11); de bot
+en het portaal versturen niets.
 
 ## Opbouw van een script
 
