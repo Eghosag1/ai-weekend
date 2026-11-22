@@ -38,7 +38,7 @@ wacht op het nakijken door Eghosa (vragen in §7 daar). Daarna stap 2 (portaal).
 ## Open vragen
 - Melding voor het team bij opmerkingen of akkoord van de klant (Slack, "Wacht op jou" in het portaal, of later): Eghosa
   denkt erover na.
-- Woordenlijst montage: `broll` en `tekstkaart` nakijken tegen het montageprofiel; ontbreekt er iets?
+- Scriptformaat en woordenlijst montage: vragen in `SCRIPTFORMAAT.md` §7.
 - Wie verwerkt de opmerkingen van de klant: dezelfde persoon die het script aanvroeg?
 - Testen op Dries Test vraagt testgesprekken in Client Check (die heeft er 0). Zet Eghosa die erin, of testen we op een
   echte klant met alleen lezen en zonder iets naar het portaal te sturen?
