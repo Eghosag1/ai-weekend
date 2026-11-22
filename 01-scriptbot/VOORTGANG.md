@@ -4,11 +4,21 @@ Bijwerken na elke sessie (datum, wat gedaan, wat open, beslissingen). Nieuwste b
 (sessies 3-6, 21/11) staat in de git-geschiedenis (commit `3df99f5`).
 
 ## Status
-Stap 1 klaar (`SCRIPTFORMAAT.md`). Stap 2 (portaal) **live sinds 22/11**: revenuelab-portaal (`~/Desktop/revenuelab-portaal`)
-commits `776ece6` en `c54577b`. Volgende: stap 3 (plugin `Red-Pepper-Antwerp/scriptbot`). Hermann nog lid maken van het
-portaal (Beheer → Leden).
+Stap 1 klaar (`SCRIPTFORMAAT.md`). Stap 2 (portaal) live sinds 22/11. Stap 3 (plugin) gebouwd:
+`Red-Pepper-Antwerp/scriptbot` (privé, lokaal `~/Developer/scriptbot`). Volgende: Eghosa test de plugin interactief
+(installeren, inloggen bij beide koppelingen, een script voor Dries Test). Hermann lid maken:
+`scripts/clientcheck.sh sql live/lid_hermann.sql` in `~/Desktop/revenuelab-portaal` (het portaal heeft geen scherm voor
+leden).
 
 ## Logboek
+- 2026-11-22 (sessie 7, stap 3): plugin `Red-Pepper-Antwerp/scriptbot` (privé): `skills/scriptbot/SKILL.md` (aanvraag,
+  feitencheck vers uit Client Check, bestaande scripts, invalshoeken, script met takes, akkoord → `script_zetten`,
+  scriptlink, opmerkingen verwerken; regels), `references/scriptformaat.md` (uit `SCRIPTFORMAAT.md`), `.mcp.json`
+  (`client-check` = copilot-mcp, `revenuelab-portaal` = portaal-mcp, beide OAuth), marketplace `revenuelab`.
+  `claude plugin validate` geslaagd (alleen waarschuwingen voor de openbare catalogus: icoon, privacybeleid). Geladen
+  met `--plugin-dir`: beide koppelingen vragen om in te loggen (de OAuth-ontdekking werkt). Niet getest: inloggen en een
+  volledig script (interactief, door Eghosa). Hermann: het portaal heeft geen scherm voor leden (README: "een lid komt
+  erbij met een script"); `live/lid_hermann.sql` gemaakt (rol lid, twee keer draaien = niets dubbel).
 - 2026-11-22 (sessie 7, live): het ontwerp van 21/11 bleek wél live te staan (in de notities stond van niet). Het nieuwe
   live-script weigerde daarom (één transactie, niets veranderd). Oud terugdraaiscript gemaakt
   (`live/20261121200000_oud_terug.sql`), lokaal getest (oud eraf, nieuw erop, tests groen) en nagekeken tegen live (alleen

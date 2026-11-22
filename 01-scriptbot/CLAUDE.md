@@ -68,7 +68,7 @@ Filmen: geen inspreken van take-nummers door Hermann; de videobot koppelt clips 
 
 | Waar | Wat |
 | --- | --- |
-| **`Red-Pepper-Antwerp/scriptbot`** (nieuw, privé) | Plugin voor Claude Code: de skill + de koppelingen (`.mcp.json`) naar de MCP van Client Check en `portaal-mcp`. Hermann en Gini installeren hem in de desktop-app van Claude (tab Code). Updates via de plugin. |
+| **`Red-Pepper-Antwerp/scriptbot`** (privé, lokaal `~/Developer/scriptbot`) | Plugin voor Claude Code: de skill + de koppelingen (`.mcp.json`) naar de MCP van Client Check en `portaal-mcp`. Hermann en Gini installeren hem in de desktop-app van Claude (tab Code). Updates via de plugin. |
 | **Client Check** | Het enige klantbrein: de feiten komen telkens uit de gesprekken. Bestaande MCP `copilot-mcp` (OAuth met de eigen account; geen sleutels op laptops). Geen wijziging nodig. |
 | **`revenuelab-portaal`** | Tabel scripts per klant (finaal, regie verborgen voor de klant, status `wacht_op_klant` → `opmerkingen` → `goedgekeurd`, herkomst `bot` / `eerder_gebruikt`), opmerkingen van de klant, klantscherm (lezen, goedkeuren, opmerkingen). Nieuwe Edge Function **`portaal-mcp`** (zelfde opzet en login als `copilot-mcp`): scripts van een klant ophalen, script finaal zetten, opmerkingen ophalen. Het portaal logt wie wat zette. |
 | **creatieve-motor (`~/Desktop/video-agent`)** | De videobot leest het goedgekeurde script + regie uit het portaal (`portaal-bot`) als montageplan. De oude skill `scriptbot`, `16_SCRIPTS.md` en `tools/scripts.py` gaan weg (naamconflict, vervangen door de plugin). |
