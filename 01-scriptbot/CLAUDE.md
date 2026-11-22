@@ -91,5 +91,6 @@ Filmen: geen inspreken van take-nummers door Hermann; de videobot koppelt clips 
 - Testen op Dries Test. Echte klantgegevens alleen in Client Check en het portaal, nooit in deze werkmap of de plugin-repo.
 
 ## Let op
-- Het portaal staat op deze laptop twee keer: `~/Developer/revenuelab-portaal` en `~/Desktop/revenuelab-portaal` (daar staat
-  de migratie `20261121200000_portaal_scripts.sql`). Eerst nagaan welke de werkkopie is.
+- Het portaal staat op deze laptop twee keer. **De werkkopie is `~/Desktop/revenuelab-portaal`** (Eghosa, 22/11); daar staat
+  de migratie `20261121200000_portaal_scripts.sql`. De kloon in `~/Developer` niet gebruiken.
+- Het scriptformaat (stap 1): `SCRIPTFORMAAT.md`.

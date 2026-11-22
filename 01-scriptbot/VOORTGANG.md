@@ -4,10 +4,16 @@ Bijwerken na elke sessie (datum, wat gedaan, wat open, beslissingen). Nieuwste b
 (sessies 3-6, 21/11) staat in de git-geschiedenis (commit `3df99f5`).
 
 ## Status
-Nieuw ontwerp besproken en uitgeschreven in `CLAUDE.md`. Nog niets gebouwd. Wacht op: ja van Eghosa op de bouwvolgorde,
-beginnend met stap 1 (woordenlijst montage en scriptformaat).
+Bouwvolgorde goedgekeurd (22/11). Stap 1 (scriptformaat en woordenlijst montage) uitgeschreven in `SCRIPTFORMAAT.md`;
+wacht op het nakijken door Eghosa (vragen in §7 daar). Daarna stap 2 (portaal).
 
 ## Logboek
+- 2026-11-22 (sessie 7, vervolg): stap 1. Montageprofiel §1-§10b en het shotlijst-sjabloon gelezen. Vaststelling: zooms,
+  overgangen, kleur, captions, geluid en eindkaart doet de videobot altijd zelf; het script beschrijft alleen inhoudelijke
+  keuzes. `SCRIPTFORMAAT.md`: opbouw (kop, hooks met verplichte visuele hook, takes met tekst/filmen/montage, feiten),
+  woordenlijst (`geen` standaard, `beeld`, `beeld_achter_spreker`, `opsomming`, `overlay`, `cta_module`, `vrij`), drie
+  weergaven (chat, klant, team/videobot), shootlijst per plek, JSON, voorbeeld. Dries Test heeft 0 gesprekken in Client
+  Check (alleen SELECT): het voorbeeld gebruikt verzonnen feiten, duidelijk gemarkeerd.
 - 2026-11-22 (sessie 7): brainstorm met Eghosa over een nieuwe scriptbot. Gelezen: het vorige ontwerp, het scriptsjabloon en
   het montageprofiel van de videobot, de MCP van Client Check (OAuth per gebruiker; geen tabel met commerciële feiten:
   `client_facts` is persoonlijk), de koppeling van de videobot met het portaal (`portaal-bot`, eigen sleutel). Gevonden: de
@@ -25,11 +31,14 @@ beginnend met stap 1 (woordenlijst montage en scriptformaat).
   verborgen voor de klant.
 - Gebruikers: Hermann en Gini (hebben een account in Client Check en toegang tot Claude Code). Plugin in een eigen repo
   `Red-Pepper-Antwerp/scriptbot`. Aan het einde een standaardprompt die alles voor hen instelt.
+- Werkkopie portaal: `~/Desktop/revenuelab-portaal`.
+- Bouwvolgorde goedgekeurd; beginnen met stap 1.
 - De ±89 oude scripts eenmalig in het portaal als "eerder gebruikt", onzichtbaar voor de klant.
 
 ## Open vragen
 - Melding voor het team bij opmerkingen of akkoord van de klant (Slack, "Wacht op jou" in het portaal, of later): Eghosa
   denkt erover na.
 - Woordenlijst montage: `broll` en `tekstkaart` nakijken tegen het montageprofiel; ontbreekt er iets?
-- Welke kloon van het portaal is de werkkopie (`~/Developer` of `~/Desktop`)?
 - Wie verwerkt de opmerkingen van de klant: dezelfde persoon die het script aanvroeg?
+- Testen op Dries Test vraagt testgesprekken in Client Check (die heeft er 0). Zet Eghosa die erin, of testen we op een
+  echte klant met alleen lezen en zonder iets naar het portaal te sturen?
