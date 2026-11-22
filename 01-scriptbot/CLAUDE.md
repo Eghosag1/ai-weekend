@@ -1,72 +1,95 @@
 # 01 Scriptbot
 
-Lees eerst `../CLAUDE.md`. Analyse en beslissingen: dit bestand en `VOORTGANG.md`. Eerste versie van de skill (sessie 3,
-21/11): git-geschiedenis, commit `4cef105`, map `01-scriptbot/skill/`.
+Lees eerst `../CLAUDE.md`, dan dit bestand, dan `VOORTGANG.md`. Nieuw ontwerp van 22/11 (sessie 7). Het vorige ontwerp
+(scriptrondes, klantfeiten in het portaal, werkertaak) staat in de git-geschiedenis: laatste stand in commit `3df99f5`.
+
+Deze map is de cockpit (ontwerp, beslissingen, voortgang). De code komt in de repo's hieronder.
 
 ## Doel
-Voor elke nieuwe klant de advertentiescripts voor de kick-off voorbereiden: 3 scripts met elk 2 hooks, gepersonaliseerd
-met hun aanbod, werf, prijs en promotie, met per script de vlag "klant acteert" of "acteur nodig". Niets verzonnen: elk
-feit heeft een bron. Iemand van het team kijkt na (±15 min), de klant keurt goed of past aan in de kick-off, daarna gaan de scripts
-naar de shoot van Hermann en de montage van de videobot, zonder iets over te typen. Daarna kan het team altijd nieuwe
-scripts laten schrijven (promotie, invalshoek, meer hooks): elke aanvraag is een **scriptronde**.
+Hermann (videograaf) of Gini (planner) vraagt in Claude Code in gewone taal een of meer advertentiescripts voor een klant:
+waarover, waar er gefilmd wordt. De bot controleert de feiten in Client Check, houdt rekening met de scripts die de klant al
+heeft, en schrijft het script in de chat met **per take hoe het gefilmd wordt en hoe de montage eruitziet**. Goedgekeurd in de
+chat → finaal in het portaal; de klant keurt goed of geeft opmerkingen; daarna leest de videobot het script als montageplan.
 
-## Bron in de briefing
-- Kick-off prep stap 5: "the script bot writes them from the briefing, personalised with their site, price and promotion,
-  and flags whether the client acts or we need an actor."
-- Stap 11: Thibo checkt de berekening en de scripts (±15 min); de accountmanager de dag ervoor.
-- Kick-offdeck deel 3: de scripts een per dia, goedgekeurd of aangepast ter plaatse; de shoot (locatie, wie, datum).
-- Onboardingcall: vragen 1 tot 10 (`../00-bronnen/briefing-wannes-2026-11-21.md`, *Short onboarding call*).
+## Zo werkt het
 
-## Architectuur (beslist 21/11, Eghosa: "akkoord")
+1. **Aanvragen in gewone taal**, geen commando. Bv. "Schrijf twee scripts voor Loni Bouw over de winterpromotie, we filmen op
+   de werf in Mechelen." De skill springt aan op zijn beschrijving en vraagt alleen wat ontbreekt (wie in beeld, wat er op de
+   locatie te zien is, aantal scripts en hooks).
+2. **Feitencheck, telkens vers uit Client Check** (MCP `client-check`: `get_client_overview`, `search_conversations`,
+   `get_conversation`, `search_commitments`; plus de antwoorden uit de onboardingtool). Geen kopie van de feiten ergens anders.
+   De bot zoekt eerst naar nieuwe gesprekken, toont dan een tabel *feit · bron · datum* en signaleert: tegenstrijdig (bv.
+   andere prijs in een recentere mail), verlopen (promotie voorbij einddatum), zonder bron (wordt een vraag, niet in het
+   script). De gebruiker zegt "klopt" of past aan; pas dan schrijft de bot.
+3. **Rekening houden met bestaande scripts**: de bot haalt de scripts van de klant uit het portaal (ook de eenmalig
+   ingeladen oude scripts, herkomst `eerder_gebruikt`): geen herhaling van invalshoek of hook, leren van wat goedgekeurd of
+   aangepast werd.
+4. **Eerst 3-5 invalshoeken** (elk één regel + het feit waarop ze steunen), de gebruiker kiest, dan de volledige scripts.
+   Bijsturen in het gesprek.
+5. **Goedgekeurd in de chat → finaal in het portaal.** Geen versies. Status `wacht_op_klant`.
+6. **Klant in het portaal** ziet alleen de tekst; keurt goed of geeft opmerkingen.
+7. **Opmerkingen**: in Claude Code "verwerk de opmerkingen van de klant op <klant>" → het script wordt vervangen en gaat
+   terug naar de klant. De opmerkingen blijven staan (waarom het veranderde).
+8. **Na akkoord** leest de videobot het script met de regie uit het portaal (`portaal-bot`).
 
-Geen nieuwe app. Elk systeem doet wat het al doet:
+De klant verwittigen doet Romina; de bot zet hoogstens een concept in Vandaag.
 
-| Systeem | Rol |
+## Opbouw van een script
+
+| Deel | Inhoud | Klant ziet |
+| --- | --- | --- |
+| Kop | titel, invalshoek, onderwerp, locatie, wie in beeld (klant / acteur) | titel |
+| Hooks | H1, H2 … (elke hook = een volledige video met dezelfde body en einde) | ja |
+| Takes | per take: **tekst** · **filmen** (kader, plek op de locatie, beweging, wie) · **montage** | alleen de tekst |
+| Feiten | elk gebruikt feit: wat, bron (gesprek/mail + datum), letterlijk in welke take | nee |
+
+**Montage per take: standaard niets extra.** De standaard is spreker in beeld met captions (montageprofiel). Een toevoeging
+komt er alleen als ze iets bijbrengt, met één regel waarom (bv. een prijs die moet blijven hangen → tekstkaart; drie stappen
+→ opsomming). De meeste takes: "spreker, geen toevoeging".
+
+**Woordenlijst montage** (concept, na te kijken door Eghosa tegen `video-agent/VIDEO AGENT/06_MONTAGEPROFIEL.md`): namen die
+de videobot kan uitvoeren in plaats van vage omschrijvingen.
+
+| Naam | Wat | Bron |
+| --- | --- | --- |
+| `standaard` | spreker + captions | montageprofiel, `03_CAPTIONS.md` |
+| `diepte_woord` | groot woord achter de spreker, wisselt op het gezegde woord (hook) | §4 |
+| `opsomming` | punten met beeld per punt, op het woord | §5 |
+| `cta_module` | herbruikbare klantmodule (bv. de calculator), geanimeerd | §10 |
+| `broll` | ander beeld over de stem (welk beeld staat bij *filmen*) | na te kijken |
+| `tekstkaart` | korte tekst of bedrag in beeld | na te kijken |
+| `vrij` | idee buiten de lijst; de videobot vraagt het na in plaats van te gokken | |
+
+Filmen: geen inspreken van take-nummers door Hermann; de videobot koppelt clips aan takes via de transcriptie (zoals nu).
+
+## Architectuur
+
+| Waar | Wat |
 | --- | --- |
-| Client Check | **De klantfeiten** (aanbod, uitsluitingen, prijs, promotie + einddatum, USP's, bezwaren, werf, wie in beeld, regio), per veld `voorstel` → `bevestigd`. Een bevestigd veld wordt nooit overschreven. Plus de Fireflies-transcripties. |
-| video-agent | **De scriptbot**: skill `scriptbot`, `16_SCRIPTS.md`, `tools/scripts.py`. Scriptbriefing en scriptversies in de klantmap. Later ook de montage op die scripts. |
-| Portaal | **Scripts per klant** op de klantpagina (tab Scripts, per ronde; niet in een campagne, beslist 21/11 avond), met versies, rechtstreeks aanpassen, feedback, nakijken (iedereen van het team), klantakkoord per ronde en koppeling per script aan campagnes. Aanvragen via *Nieuwe opdracht → Scripts*; de werker schrijft ze. *Naar productie*: video-ad-opdracht, status `wacht_op_footage`. |
-| Wrike | Taak "scripts nakijken" voor Thibo, shoottaak voor Hermann (via de Vault `wrike-run`, met de goedkeuringszin). |
-| Kick-off-agent | Roept de scriptbot op zodra de feiten compleet genoeg zijn (nog niet gebouwd). |
+| **`Red-Pepper-Antwerp/scriptbot`** (nieuw, privé) | Plugin voor Claude Code: de skill + de koppelingen (`.mcp.json`) naar de MCP van Client Check en `portaal-mcp`. Hermann en Gini installeren hem in de desktop-app van Claude (tab Code). Updates via de plugin. |
+| **Client Check** | Het enige klantbrein: de feiten komen telkens uit de gesprekken. Bestaande MCP `copilot-mcp` (OAuth met de eigen account; geen sleutels op laptops). Geen wijziging nodig. |
+| **`revenuelab-portaal`** | Tabel scripts per klant (finaal, regie verborgen voor de klant, status `wacht_op_klant` → `opmerkingen` → `goedgekeurd`, herkomst `bot` / `eerder_gebruikt`), opmerkingen van de klant, klantscherm (lezen, goedkeuren, opmerkingen). Nieuwe Edge Function **`portaal-mcp`** (zelfde opzet en login als `copilot-mcp`): scripts van een klant ophalen, script finaal zetten, opmerkingen ophalen. Het portaal logt wie wat zette. |
+| **creatieve-motor (`~/Desktop/video-agent`)** | De videobot leest het goedgekeurde script + regie uit het portaal (`portaal-bot`) als montageplan. De oude skill `scriptbot`, `16_SCRIPTS.md` en `tools/scripts.py` gaan weg (naamconflict, vervangen door de plugin). |
 
-**Waarom in video-agent:** de bot praat al met het portaal (`tools/portaal.py` via `portaal-bot`), het scriptformaat
-(`templates/video_project/01_SCRIPT.md`), de lat (`BRIEFING.md`) en de tekstcontrole (`tools/teksten.py`) staan daar,
-en dezelfde bot monteert later op die scripts.
+## Bouwvolgorde (na een ja van Eghosa)
 
-**Hoe de klantfeiten gevuld worden:**
-
-| Bron | Wat | Status |
+| Stap | Wat | Raakt |
 | --- | --- | --- |
-| Onboardingtool van Eghosa (klant vult in) | prijzen, postcodes | `bevestigd` |
-| Fireflies-transcriptie van de onboardingcall (Wannes) | aanbod, niet verkopen, USP's, bezwaren, promotie + einddatum, werf, wie in beeld, shootdata | `voorstel` (met tijdcode) |
-| Website | diensten, formuleringen, bewijs | `voorstel` (met URL) |
-| Schatting van de bot (alleen prijs, alleen als de klant geen prijs gaf) | een realistische "vanaf"-prijs | `schatting`: Thibo bevestigt vóór de kick-off |
-
-Wannes of Thibo bevestigt in Client Check. Wat na de call nog ontbreekt, wordt een vraag aan de klant.
-
-**Van goedgekeurd script naar video (footage):** na de kick-off maakt de bot de video-ad-opdracht aan met de scripts,
-footage via SD-kaart, status `wacht_op_footage` (bestaat). Hermann filmt met de shootlijst per script. De kaart gaat in de
-opname-pc; op de opdrachtpagina kies je de clips (bewust met de hand, `video-agent/VIDEO AGENT/09_OPDRACHTEN.md` §5) en de
-bot start. Bij te bouwen: een opdracht zonder clips kunnen aanmaken, en de koppeling script → opdracht.
-
-## Bouwvolgorde
-
-| Fase | Wat | Raakt |
-| --- | --- | --- |
-| 1 | Skill `scriptbot` + `16_SCRIPTS.md` + `tools/scripts.py` (start, nieuw, controle, md, video, lijst). Scriptbriefing als bestand in de klantmap (zelfde velden als de toekomstige tabel). Test op de anonieme testklant. | video-agent |
-| 2 | Tabel klantfeiten in Client Check (voorstel/bevestigd) + MCP-leestool, als migratiescript dat Eghosa draait. De bot leest de transcriptie en stelt de feiten voor. | ClientsCheck (script), video-agent |
-| 3 | Portaal: scriptrondes per klant (versies, feedback per script, rechtstreeks aanpassen, goedkeuring, koppelen aan campagnes); werkertaak `scripts`. Bot-API bijvoegen (eerst portaal, dan bot). | revenuelab-portaal, video-agent |
-| 4 | Na goedkeuring: video-ad-opdracht zonder clips (`wacht_op_footage`) met de scripts; shootlijst voor Hermann; Wrike-taken. | revenuelab-portaal, video-agent, Vault |
-| Later | Leerlus: goedgekeurde scripts en aanpassingen van Thibo als referenties, hook-tags en Meta-resultaten uit de Creative Optimizer (Client Check). | |
+| 1 | Woordenlijst montage nakijken met Eghosa; scriptformaat (leesbaar + JSON voor de regie) vastleggen met een voorbeeld op Dries Test | deze map |
+| 2 | Portaal: migratie `20261121200000` (op GitHub, nooit live) herschrijven tot alleen scripts + opmerkingen; klantscherm; `portaal-mcp`; actie voor de videobot. Idempotent, lokaal getest; Eghosa zet live. | revenuelab-portaal |
+| 3 | Plugin `scriptbot`: skill (aanvraag, feitencheck, bestaande scripts, invalshoeken, takes, naar portaal, opmerkingen verwerken) + `.mcp.json`. Test op Dries Test. | scriptbot (nieuw) |
+| 4 | Eenmalig de ±89 oude scripts uit de klantmappen van video-agent in het portaal zetten als `eerder_gebruikt` (onzichtbaar voor de klant). Eghosa draait het. | video-agent, portaal |
+| 5 | Videobot leest script + regie uit het portaal; oude scriptbot in video-agent opruimen. | video-agent |
+| 6 | **Installatieprompt voor Hermann en Gini**: plakken in Claude Code → kijkt GitHub-toegang na, draait `claude plugin marketplace add Red-Pepper-Antwerp/scriptbot` en `claude plugin install scriptbot`, zegt waar ze eenmalig inloggen bij Client Check (browser, eigen account), test met Dries Test. | scriptbot (README) |
 
 ## Regels
-- Elk feit (prijs, getal, promotie, belofte) verwijst naar een veld van de scriptbriefing. Geen veld = schrappen of vraag.
-- Bedragen altijd met "ongeveer" of "vanaf". Promotie alleen met einddatum. Geen review, resultaat of garantie zonder bron.
-- Een prijs met status `schatting` gaat nooit naar de klant zonder bevestiging van Thibo of het team.
-- Versies worden nooit overschreven; een handmatige aanpassing wordt een nieuwe versie met herkomst `handmatig`, en de bot
-  werkt altijd verder op de hoogste versie.
-- Echte klantgegevens alleen in video-agent of Client Check, nooit in deze werkmap.
+- Elk feit (prijs, getal, promotie, belofte) heeft een bron in Client Check. Geen bron = vraag, niet in het script.
+- Bedragen met "ongeveer" of "vanaf". Promotie alleen met einddatum die nog niet voorbij is. Geen review, resultaat of
+  garantie zonder bron.
+- De bot zet niets in het portaal zonder akkoord in de chat. Klantmails verstuurt de bot nooit.
+- Geen sleutels op de laptops van Hermann en Gini: alles via de eigen login (OAuth).
+- Testen op Dries Test. Echte klantgegevens alleen in Client Check en het portaal, nooit in deze werkmap of de plugin-repo.
 
-## Hangt samen met
-Kick-off-agent (feiten, oproep), kick-offdeck (scripts per dia), branding agent (eigen plek, niet meer een gedeelde Opstart), shootplanning
-Hermann, Wrike-taak 14 "Nieuwe klant in één opdracht" van de nachtploeg (vraagt ook de scriptbriefing: afstemmen met Thibo).
+## Let op
+- Het portaal staat op deze laptop twee keer: `~/Developer/revenuelab-portaal` en `~/Desktop/revenuelab-portaal` (daar staat
+  de migratie `20261121200000_portaal_scripts.sql`). Eerst nagaan welke de werkkopie is.
