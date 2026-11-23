@@ -11,6 +11,8 @@ README van de plugin. Hermann is lid van het portaal. Volgende: een eerste echt 
 dan stap 4 (oude scripts inladen) en stap 5 (videobot leest het script).
 
 ## Logboek
+- 2026-11-23: eerste test in de chat (Dries Test): geen feiten verzonnen, vragen gesteld, feitencheck en invalshoeken
+  zoals bedoeld. Aanpassing: altijd 3 scripts × 2 hooks (was: alleen bij de kick-off), plugin 1.0.3.
 - 2026-11-23 (sessie 7, vervolg): Hermann lid gemaakt (Eghosa draaide `live/lid_hermann.sql`). Plugin op deze laptop
   geïnstalleerd en ingelogd bij beide koppelingen; leesproef: het portaal vindt Dries Test (0 scripts), `search_clients`
   van Client Check vindt hem niet (toont niet elke klant) → skill 1.0.1 valt terug op `get_client_overview` of het
@@ -80,6 +82,7 @@ dan stap 4 (oude scripts inladen) en stap 5 (videobot leest het script).
 - Opmerkingen van de klant per script, eventueel bij een zin.
 - Bouwvolgorde goedgekeurd; beginnen met stap 1.
 - Alles gebeurt in de chat van Claude Code; het portaal is alleen voor de klant (23/11).
+- Altijd 3 scripts met elk 2 hooks, tenzij anders gevraagd (23/11; plugin 1.0.3).
 - Klant ziet alleen de tekst; richtduur ±35 s, langer of korter op vraag in de aanvraag.
 - De ±89 oude scripts eenmalig in het portaal als "eerder gebruikt", onzichtbaar voor de klant.
 

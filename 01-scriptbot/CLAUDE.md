@@ -15,7 +15,7 @@ chat → finaal in het portaal; de klant keurt goed of geeft opmerkingen; daarna
 
 1. **Aanvragen in gewone taal**, geen commando. Bv. "Schrijf twee scripts voor Loni Bouw over de winterpromotie, we filmen op
    de werf in Mechelen." De skill springt aan op zijn beschrijving en vraagt alleen wat ontbreekt (wie in beeld, wat er op de
-   locatie te zien is, aantal scripts en hooks).
+   locatie te zien is). Altijd 3 scripts met elk 2 hooks, tenzij anders gevraagd (Eghosa, 23/11).
 2. **Feitencheck, telkens vers uit Client Check** (MCP `client-check`: `get_client_overview`, `search_conversations`,
    `get_conversation`, `search_commitments`; plus de antwoorden uit de onboardingtool). Geen kopie van de feiten ergens anders.
    De bot zoekt eerst naar nieuwe gesprekken, toont dan een tabel *feit · bron · datum* en signaleert: tegenstrijdig (bv.
