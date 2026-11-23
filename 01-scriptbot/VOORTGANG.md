@@ -4,13 +4,19 @@ Bijwerken na elke sessie (datum, wat gedaan, wat open, beslissingen). Nieuwste b
 (sessies 3-6, 21/11) staat in de git-geschiedenis (commit `3df99f5`).
 
 ## Status
-Stap 1 klaar (`SCRIPTFORMAAT.md`). Stap 2 (portaal) live sinds 22/11. Stap 3 (plugin) gebouwd:
-`Red-Pepper-Antwerp/scriptbot` (privé, lokaal `~/Developer/scriptbot`). Volgende: Eghosa test de plugin interactief
-(installeren, inloggen bij beide koppelingen, een script voor Dries Test). Hermann lid maken:
-`scripts/clientcheck.sh sql live/lid_hermann.sql` in `~/Desktop/revenuelab-portaal` (het portaal heeft geen scherm voor
-leden).
+Stap 1 klaar (`SCRIPTFORMAAT.md`). Stap 2 (portaal) live sinds 22/11. Stap 3 (plugin) en stap 6 (installatieprompt)
+klaar: `Red-Pepper-Antwerp/scriptbot` is **openbaar** (beslist door Eghosa 23/11; geen sleutels, klantnamen of namen van
+het team; één schone commit), versie 1.0.2, op deze laptop geïnstalleerd en ingelogd. De installatieprompt staat in de
+README van de plugin. Hermann is lid van het portaal. Volgende: een eerste echt script in de chat testen (Dries Test),
+dan stap 4 (oude scripts inladen) en stap 5 (videobot leest het script).
 
 ## Logboek
+- 2026-11-23 (sessie 7, vervolg): Hermann lid gemaakt (Eghosa draaide `live/lid_hermann.sql`). Plugin op deze laptop
+  geïnstalleerd en ingelogd bij beide koppelingen; leesproef: het portaal vindt Dries Test (0 scripts), `search_clients`
+  van Client Check vindt hem niet (toont niet elke klant) → skill 1.0.1 valt terug op `get_client_overview` of het
+  portaal. Installatieprompt in de README. Hermann en Gini zitten niet in de GitHub-organisatie → Eghosa koos de repo
+  openbaar te maken; eerst klantnaam (voorbeeld) en voornamen vervangen door een verzonnen naam en rollen (1.0.2), daarna
+  door Eghosa: geschiedenis tot één commit en openbaar (mijn poging daartoe werd terecht tegengehouden).
 - 2026-11-22 (sessie 7, stap 3): plugin `Red-Pepper-Antwerp/scriptbot` (privé): `skills/scriptbot/SKILL.md` (aanvraag,
   feitencheck vers uit Client Check, bestaande scripts, invalshoeken, script met takes, akkoord → `script_zetten`,
   scriptlink, opmerkingen verwerken; regels), `references/scriptformaat.md` (uit `SCRIPTFORMAAT.md`), `.mcp.json`
@@ -67,12 +73,13 @@ leden).
 - Klant ziet alleen de tekst; kan goedkeuren en opmerkingen geven. De regie staat bij het script in het portaal,
   verborgen voor de klant.
 - Gebruikers: Hermann en Gini (hebben een account in Client Check en toegang tot Claude Code). Plugin in een eigen repo
-  `Red-Pepper-Antwerp/scriptbot`. Aan het einde een standaardprompt die alles voor hen instelt.
+  `Red-Pepper-Antwerp/scriptbot`, openbaar (23/11). Aan het einde een standaardprompt die alles voor hen instelt.
 - Werkkopie portaal: `~/Desktop/revenuelab-portaal`.
 - Scriptlink per klant (los van de klantlink per campagne); wie het script maakte stuurt hem zelf door, niet Romina.
 - Geen koppeling met campagnes en geen "naar productie": de videobot vraagt het script op per klant en nummer.
 - Opmerkingen van de klant per script, eventueel bij een zin.
 - Bouwvolgorde goedgekeurd; beginnen met stap 1.
+- Alles gebeurt in de chat van Claude Code; het portaal is alleen voor de klant (23/11).
 - Klant ziet alleen de tekst; richtduur ±35 s, langer of korter op vraag in de aanvraag.
 - De ±89 oude scripts eenmalig in het portaal als "eerder gebruikt", onzichtbaar voor de klant.
 
