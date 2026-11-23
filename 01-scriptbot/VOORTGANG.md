@@ -4,13 +4,19 @@ Bijwerken na elke sessie (datum, wat gedaan, wat open, beslissingen). Nieuwste b
 (sessies 3-6, 21/11) staat in de git-geschiedenis (commit `3df99f5`).
 
 ## Status
-Stap 1 klaar (`SCRIPTFORMAAT.md`). Stap 2 (portaal) live sinds 22/11. Stap 3 (plugin) en stap 6 (installatieprompt)
-klaar: `Red-Pepper-Antwerp/scriptbot` is **openbaar** (beslist door Eghosa 23/11; geen sleutels, klantnamen of namen van
-het team; één schone commit), versie 1.0.2, op deze laptop geïnstalleerd en ingelogd. De installatieprompt staat in de
-README van de plugin. Hermann is lid van het portaal. Volgende: een eerste echt script in de chat testen (Dries Test),
-dan stap 4 (oude scripts inladen) en stap 5 (videobot leest het script).
+Stap 1, 2 (live), 3 en 6 klaar; plugin `Red-Pepper-Antwerp/scriptbot` openbaar, versie 1.0.6. Stap 4 klaar om live te
+zetten: `live/scripts_eerder_gebruikt.sql` in revenuelab-portaal (57 oude scripts, Eghosa draait het). Open: de test in
+een nieuwe chat (Eghosa), dan stap 5 (videobot leest het script, oude scriptbot uit video-agent).
 
 ## Logboek
+- 2026-11-23: na elke oplevering vraagt de bot zelf om akkoord; "akkoord" = in het portaal + meteen de scriptlink +
+  uitleg wat volgt (Eghosa; plugin 1.0.5). Stap 4: 84 oude 01_SCRIPT.md uit video-agent woordelijk omgezet (subagents;
+  waar 01_SCRIPT een leeg sjabloon of verwijzing was: het bronscript in `assets/scripts/` of de transcriptie). 27 zonder
+  spraak (aftermovies, beursreels, socials) overgeslagen, 57 gesproken scripts bij 14 klanten. Niet ingeladen: DPG (niet
+  in Client Check), Revenue Lab (intern), testmappen. ABBI hoort bij "Floors and More ABBI". Per script
+  `klantakkoord` (uit 03_STATUS.md). Generator `scripts/scripts_eerder_gebruikt.py` (commit 0858a25), idempotent op
+  klant + bron, lokaal twee keer getest. De oude scripts krijgen de eerste nummers; nieuwe scripts nummeren verder
+  (S9 enz.). Plugin 1.0.6: vertrek vooral van de eerder gebruikte scripts met klantakkoord.
 - 2026-11-23: Eghosa vond de eerste testscripts te generiek ("Ik ben Dries. Ons bedrijf bestaat sinds 2012…"). Analyse
   van ±55 eigen spreekscripts (±20 goedgekeurd) → stijlgids `references/stijl.md` in de plugin (soorten scripts met
   aandeel, hooks met voorbeelden, toon, wat niet voorkomt, lengte ±95-125 woorden, 15 schrijfregels; geanonimiseerd).
