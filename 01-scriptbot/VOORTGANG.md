@@ -11,6 +11,11 @@ README van de plugin. Hermann is lid van het portaal. Volgende: een eerste echt 
 dan stap 4 (oude scripts inladen) en stap 5 (videobot leest het script).
 
 ## Logboek
+- 2026-11-23: Eghosa vond de eerste testscripts te generiek ("Ik ben Dries. Ons bedrijf bestaat sinds 2012…"). Analyse
+  van ±55 eigen spreekscripts (±20 goedgekeurd) → stijlgids `references/stijl.md` in de plugin (soorten scripts met
+  aandeel, hooks met voorbeelden, toon, wat niet voorkomt, lengte ±95-125 woorden, 15 schrijfregels; geanonimiseerd).
+  De skill leest ze vóór het schrijven, kiest bij 3 scripts drie soorten en vertrekt van de vorige scripts van de klant.
+  Plugin 1.0.4. Idee voor later: een tool in portaal-mcp met goedgekeurde voorbeeldscripts van andere klanten (privé).
 - 2026-11-23: eerste test in de chat (Dries Test): geen feiten verzonnen, vragen gesteld, feitencheck en invalshoeken
   zoals bedoeld. Aanpassing: altijd 3 scripts × 2 hooks (was: alleen bij de kick-off), plugin 1.0.3.
 - 2026-11-23 (sessie 7, vervolg): Hermann lid gemaakt (Eghosa draaide `live/lid_hermann.sql`). Plugin op deze laptop
