@@ -4,11 +4,17 @@ Bijwerken na elke sessie (datum, wat gedaan, wat open, beslissingen). Nieuwste b
 (sessies 3-6, 21/11) staat in de git-geschiedenis (commit `3df99f5`).
 
 ## Status
-Stap 1, 2 (live), 3 en 6 klaar; plugin `Red-Pepper-Antwerp/scriptbot` openbaar, versie 1.0.6. Stap 4 klaar om live te
-zetten: `live/scripts_eerder_gebruikt.sql` in revenuelab-portaal (57 oude scripts, Eghosa draait het). Open: de test in
-een nieuwe chat (Eghosa), dan stap 5 (videobot leest het script, oude scriptbot uit video-agent).
+Alle stappen (1-6) gebouwd. Live: portaal (stap 2), plugin 1.0.6 (openbaar). Nog door Eghosa te doen: stap 4 live zetten
+(`scripts/clientcheck.sh sql live/scripts_eerder_gebruikt.sql` in revenuelab-portaal) en de test in een nieuwe chat.
+Open vragen hieronder (melding naar het team, wie opmerkingen verwerkt).
 
 ## Logboek
+- 2026-11-24: stap 5. Videobot (video-agent): `tools/portaal.py montageplan --code <KODE> --nr <n> <videomap>` haalt
+  een door de klant goedgekeurd script (portaal-bot, actie `scripts`) en schrijft 01_SCRIPT.md (vorm van het sjabloon:
+  outputvarianten, hooks met visuele hook, body/einde met per take filmen en montage, feiten) + 01_SCRIPT.json; nooit
+  overschrijven (alleen het lege sjabloon). De opdrachtprompt van de werker noemt het. Oude scriptbot weg: skill
+  `scriptbot`, `16_SCRIPTS.md`, `tools/scripts.py` + test, `config/scripts.json`, `templates/klant/scriptbriefing.json`,
+  taaksoort `scripts` in de werker (stond nooit live in het portaal). 387 tests videobot groen (commit ad1aeb79). BOT-API bijgewerkt (f169542).
 - 2026-11-23: na elke oplevering vraagt de bot zelf om akkoord; "akkoord" = in het portaal + meteen de scriptlink +
   uitleg wat volgt (Eghosa; plugin 1.0.5). Stap 4: 84 oude 01_SCRIPT.md uit video-agent woordelijk omgezet (subagents;
   waar 01_SCRIPT een leeg sjabloon of verwijzing was: het bronscript in `assets/scripts/` of de transcriptie). 27 zonder
