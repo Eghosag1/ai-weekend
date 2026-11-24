@@ -9,6 +9,9 @@ Alle stappen (1-6) gebouwd. Live: portaal (stap 2), plugin 1.0.6 (openbaar). Nog
 Open vragen hieronder (melding naar het team, wie opmerkingen verwerkt).
 
 ## Logboek
+- 2026-11-24: Gini kreeg "geen lid van het portaal" (ingelogd met office@). Eghosa: iedereen van Client Check is meteen
+  lid. Migratie 20261124160000 (revenuelab-portaal 5e0cfb9): is_lid() = portaal.leden of een rol in public.user_roles;
+  de 6 accounts zonder lid-rij erbij als 'lid'. Lokaal 1276 tests groen. Live: `live/20261124160000_live.sql` (Eghosa).
 - 2026-11-24: stap 5. Videobot (video-agent): `tools/portaal.py montageplan --code <KODE> --nr <n> <videomap>` haalt
   een door de klant goedgekeurd script (portaal-bot, actie `scripts`) en schrijft 01_SCRIPT.md (vorm van het sjabloon:
   outputvarianten, hooks met visuele hook, body/einde met per take filmen en montage, feiten) + 01_SCRIPT.json; nooit
