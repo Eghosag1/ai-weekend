@@ -113,3 +113,12 @@ Eghosa) en de open vragen hieronder.
 - Scriptformaat §7: lijst "wat de videobot altijd zelf doet" en `overlay` houden (Eghosa kijkt na).
 - Testen op Dries Test vraagt testgesprekken in Client Check (die heeft er 0). Zet Eghosa die erin, of testen we op een
   echte klant met alleen lezen en zonder iets naar het portaal te sturen?
+
+### 24/11: 1.1.0, alleen tekst
+- Eghosa: "voor nu alleen scripts geven en checken of we ze al gebruikt hebben". De bot schrijft geen filmen, montage,
+  visuele hook of shootlijst meer: alleen titel, 2 hooks en takes.
+- Vast in elk script: "bereken het in 2 minuten" in één van de 2 hooks; de calculatorbody vlak voor de CTA (letterlijk die
+  van de klant uit een goedgekeurd script, anders de standaardtekst).
+- Voor de oplevering: controleregel per script (nieuw tegenover alle scripts in het portaal, ook eerder gebruikt; 2 minuten;
+  calculatorbody).
+- Geparkeerd (Open vraag): edits per take (analyse 24/11 van 80 video's: alleen-spreker is 23% van de goedgekeurde takes).
