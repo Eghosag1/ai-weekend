@@ -4,9 +4,9 @@ Bijwerken na elke sessie (datum, wat gedaan, wat open, beslissingen). Nieuwste b
 (sessies 3-6, 21/11) staat in de git-geschiedenis (commit `3df99f5`).
 
 ## Status
-Alle stappen (1-6) gebouwd. Live: portaal (stap 2), plugin 1.0.6 (openbaar). Nog door Eghosa te doen: stap 4 live zetten
-(`scripts/clientcheck.sh sql live/scripts_eerder_gebruikt.sql` in revenuelab-portaal) en de test in een nieuwe chat.
-Open vragen hieronder (melding naar het team, wie opmerkingen verwerkt).
+Alle stappen (1-6) gebouwd en live (24/11): portaal, plugin 1.0.6 (openbaar), 57 oude scripts als eerder gebruikt,
+elk account van Client Check lid van het portaal (migratie 20261124160000). Open: de test in een nieuwe chat (Gini,
+Eghosa) en de open vragen hieronder.
 
 ## Logboek
 - 2026-11-24: Gini kreeg "geen lid van het portaal" (ingelogd met office@). Eghosa: iedereen van Client Check is meteen
