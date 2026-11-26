@@ -122,3 +122,8 @@ Eghosa) en de open vragen hieronder.
 - Voor de oplevering: controleregel per script (nieuw tegenover alle scripts in het portaal, ook eerder gebruikt; 2 minuten;
   calculatorbody).
 - Geparkeerd (Open vraag): edits per take (analyse 24/11 van 80 video's: alleen-spreker is 23% van de goedgekeurde takes).
+
+### 26/11: 1.2.0, concrete filminstructies
+- Eghosa wil toch filminstructies, maar concreet; b-roll toont wat er in die take gezegd wordt. Per hook en take één regel
+  Filmen: spreker (plek + actie), spreker + beeld erachter, b-roll (één shot per gezegd ding, ±5 s), of niets
+  (calculatorbody: schone audiotake). Shootlijst per plek terug; de bot vraagt weer waar er gefilmd wordt. Montage blijft weg.
